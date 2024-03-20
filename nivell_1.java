@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public class nivell_1 {
     public static void main(String[] args) {
-
+ 
         ArrayList<String> ciudades = new ArrayList<>();
 
 
@@ -42,7 +42,6 @@ public class nivell_1 {
                        "Moscu;2;890,230;Teheran,Estambul,San Petersburgo;" +
                        "Teheran;2;920,310;Moscu,Bagdad,Karachi,Nueva Delhi;" +
                        "Karachi;2;980,355;Teheran,Bagdad,Nueva Delhi,Riad,Bombay;" +
-                       "Bombay;2;1005,395;Karachi,Nueva Delhi,Madras;" +
                        "Nueva Delhi;2;1025,330;Teheran,Karachi,Bombay,Madras,Calcuta;" +
                        "Calcuta;2;1070,370;Nueva Delhi,Hong Kong,Madras,Bangkok;" +
                        "Madras;2;1035,410;Bombay,Nueva Delhi,Calcula,Bangkok,Yakarta;" +
