@@ -1,17 +1,17 @@
-package prueva;
+package hola;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class GameMenu extends JFrame {
 
+public class GameMenu extends JFrame {
     public GameMenu() {
         super("Menú del Juego");
 
-        // Carga una imagen de fondo
-        ImageIcon backgroundImage = new ImageIcon("C:\\\\Users\\\\alumnat\\\\eclipse-workspace\\\\prueva\\\\1366_2000.jpg");
+        // Carga la imagen de fondo
+        ImageIcon backgroundImage = new ImageIcon("C:\\Users\\miquel\\Desktop\\traballs eclipse\\hola\\wow.png");
 
         // Crea un panel para el menú sin bordes
         JPanel menuPanel = new JPanel() {
@@ -23,8 +23,7 @@ public class GameMenu extends JFrame {
         };
 
         menuPanel.setLayout(new GridBagLayout()); // Centra los elementos
-        menuPanel.setBorder(null); // Sin borde
-        menuPanel.setOpaque(false); // Hace el fondo del panel transparente
+        menuPanel.setOpaque(false); // Fondo transparente
 
         // Crea los botones del menú
         JButton newGameButton = new JButton("Nueva partida");
@@ -33,34 +32,20 @@ public class GameMenu extends JFrame {
         JButton scoresButton = new JButton("Resumen de puntuaciones");
         JButton exitButton = new JButton("Salir");
 
-        // Agrega ActionListeners a los botones
-        newGameButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("Nueva partida");
-            }
-        });
+        // Configura ActionListeners
+        newGameButton.addActionListener(e -> System.out.println("Nueva partida"));
+        loadGameButton.addActionListener(e -> System.out.println("Cargar partida"));
+        exitButton.addActionListener(e -> System.exit(0)); // Salir del programa
 
-        loadGameButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("Cargar partida");
-            }
-        });
-
-        exitButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.exit(0); // Salir del programa
-            }
-        });
+        // Asigna el manejador al botón de información
+        infoButton.addActionListener(new InfoButtonHandler());
 
         // Añadir botones al panel principal
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(10, 10, 10, 10); // Espaciado entre botones
         gbc.anchor = GridBagConstraints.CENTER;
 
-        gbc.gridy = 0; // Fila
+        gbc.gridy = 0;
         menuPanel.add(newGameButton, gbc);
 
         gbc.gridy = 1;
@@ -75,24 +60,23 @@ public class GameMenu extends JFrame {
         gbc.gridy = 4;
         menuPanel.add(exitButton, gbc);
 
-        // Crea un panel inferior sin borde
+        // Panel inferior
         JPanel bottomPanel = new JPanel(new BorderLayout());
-        bottomPanel.setBorder(null); // Sin borde
-        bottomPanel.setOpaque(false); // Fondo transparente
+        bottomPanel.setOpaque(false);
 
         JLabel versionLabel = new JLabel("Versión 1.0");
         JLabel authorsLabel = new JLabel("Miquel Simo CEO, Alejandro Paris CEO, Joan Banlles CEO");
 
-        // Agrega la versión a la izquierda y los autores a la derecha
-        bottomPanel.add(versionLabel, BorderLayout.EAST); // Versión en la esquina inferior izquierda
-        bottomPanel.add(authorsLabel, BorderLayout.WEST); // Autores en la esquina inferior derecha
+        // Añade elementos al panel inferior
+        bottomPanel.add(versionLabel, BorderLayout.WEST); // Versión en la esquina inferior izquierda
+        bottomPanel.add(authorsLabel, BorderLayout.EAST); // Autores en la esquina inferior derecha
 
-        // Añade el panel principal y el panel inferior al JFrame
-        this.setLayout(new BorderLayout());
-        this.add(menuPanel, BorderLayout.CENTER);
-        this.add(bottomPanel, BorderLayout.SOUTH); // Panel inferior en la parte inferior
+        // Añadir el panel inferior y el menú principal
+        setLayout(new BorderLayout());
+        add(menuPanel, BorderLayout.CENTER);
+        add(bottomPanel, BorderLayout.SOUTH); // Panel inferior
 
-        // Configura el JFrame
+        // Configuración del JFrame
         setSize(400, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null); // Centra la ventana
@@ -100,6 +84,6 @@ public class GameMenu extends JFrame {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new GameMenu());
+        SwingUtilities.invokeLater(GameMenu::new);
     }
 }
