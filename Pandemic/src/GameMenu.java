@@ -54,6 +54,15 @@ public class GameMenu extends JFrame {
 
         // Asigna el manejador para el botón de información
         infoButton.addActionListener(new InfoButtonHandler());
+        
+        // Configura ActionListeners para cada botón
+        newGameButton.addActionListener(e -> {
+            NewGameSubMenu subMenu = new NewGameSubMenu(this); // Instancia el submenú
+            subMenu.setVisible(true); // Muestra el submenú al hacer clic
+        });
+
+        loadGameButton.addActionListener(e -> System.out.println("Cargar partida"));
+        exitButton.addActionListener(e -> System.exit(0)); // Salir del programa
 
         // Añadir botones al panel principal
         GridBagConstraints gbc = new GridBagConstraints();
