@@ -9,8 +9,9 @@ public class MapaDelMundo extends JFrame {
     private MapPanel mapPanel;
 
     public MapaDelMundo() {
+    	
         setTitle("Mapa del Mundo");
-        setSize(1920, 1080); // Tamaño de la pantalla estándar
+        setSize(1366, 768); // Tamaño de la pantalla estándar
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         // Crear el panel de mapa

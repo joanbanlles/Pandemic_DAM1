@@ -66,7 +66,7 @@ class MapPanel extends JPanel {
 
         // Configurar el layout del panel
         setLayout(null);
-        setPreferredSize(new Dimension(1920, 1080)); // Tamaño de la pantalla estándar
+        setPreferredSize(new Dimension(1366, 768)); // Tamaño de la pantalla estándar
 
         // Agregar los botones para cada ciudad
         for (String city : cities.keySet()) {
@@ -76,7 +76,11 @@ class MapPanel extends JPanel {
     }
 
     private void addCity(String name, int x, int y) {
-        cities.put(name, new Point(x, y));
+        // Ajustar las coordenadas de cada ciudad
+        // Mover hacia la izquierda (restar) y hacia arriba (restar) para centrarlas mejor en el mapa
+        int adjustedX = x - 67;
+        int adjustedY = y - 35;
+        cities.put(name, new Point(adjustedX, adjustedY));
     }
 
     private void addButton(String name, int x, int y) {
@@ -89,12 +93,12 @@ class MapPanel extends JPanel {
         Image img = icon.getImage().getScaledInstance(20, 20, Image.SCALE_SMOOTH);
         button.setIcon(new ImageIcon(img));
 
+        // Agregar acción al hacer clic en el botón
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Aquí puedes cargar la imagen relacionada con la ciudad
-                // Puedes mostrar un JFileChooser para que el usuario seleccione la imagen
-                JOptionPane.showMessageDialog(MapPanel.this, "Cargando imagen para " + name);
+                // Mostrar la ventana emergente cuando se haga clic en la ciudad
+                new CityWindow(name);
             }
         });
         add(button);
