@@ -1,16 +1,24 @@
-package pamdemic;
+package base;
+
 import javax.swing.*;
+
+import base.CityWindow.CureListener;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
+import java.util.Random;
+import java.util.Set;
+import java.util.HashSet;
 
-class MapPanel extends JPanel {
-    private HashMap<String, Point> cities;
+class MapPanel extends JPanel implements CureListener {
+
+    private HashMap<String, JButton> cityButtons;
     private Image worldMap;
 
     public MapPanel() {
-        cities = new HashMap<>();
+        cityButtons = new HashMap<>();
         // Agregar las coordenadas de las ciudades
         addCity("Yakarta", 1150, 525);
         addCity("El Cairo", 820, 350);
@@ -62,52 +70,61 @@ class MapPanel extends JPanel {
         addCity("Estambul", 830, 294);
 
         // Cargar la imagen del mapa del mundo
-        worldMap = new ImageIcon("C:\\Users\\alumnat\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\mapa_mundo.png").getImage();
+        worldMap = new ImageIcon("C:\\Users\\Nitropc\\OneDrive\\Documentos\\GitHub\\Pandemic_DAM1\\Pandemic\\mapa_mundo.png").getImage();
 
         // Configurar el layout del panel
         setLayout(null);
         setPreferredSize(new Dimension(1366, 768)); // Tamaño de la pantalla estándar
-
-        // Agregar los botones para cada ciudad
-        for (String city : cities.keySet()) {
-            Point coordinates = cities.get(city);
-            addButton(city, coordinates.x, coordinates.y);
-        }
     }
 
     private void addCity(String name, int x, int y) {
-        // Ajustar las coordenadas de cada ciudad
-        // Mover hacia la izquierda (restar) y hacia arriba (restar) para centrarlas mejor en el mapa
         int adjustedX = x - 67;
         int adjustedY = y - 35;
-        cities.put(name, new Point(adjustedX, adjustedY));
-    }
 
-    private void addButton(String name, int x, int y) {
         JButton button = new JButton(name);
-        // Ajustar la posición del botón para centrarlo en la ciudad
-        button.setBounds(x - 10, y - 10, 20, 20); // Tamaño del botón
+        button.setBounds(adjustedX - 10, adjustedY - 10, 20, 20);
 
-        // Asignar una imagen al botón
-        ImageIcon icon = new ImageIcon("image_placeholder.jpg"); // Cambia "image_placeholder.jpg" por la imagen deseada
-        Image img = icon.getImage().getScaledInstance(20, 20, Image.SCALE_SMOOTH);
-        button.setIcon(new ImageIcon(img));
-
-        // Agregar acción al hacer clic en el botón
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Mostrar la ventana emergente cuando se haga clic en la ciudad
-                new CityWindow(name);
+                try {
+                    new CityWindow(name, MapPanel.this); // Pasar una referencia de MapPanel como CureListener
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
             }
         });
+
         add(button);
+        cityButtons.put(name, button);
+
+        Random random = new Random();
+        double infectionProbability = random.nextDouble();
+        Color buttonColor;
+        if (infectionProbability < 0.2) {
+            buttonColor = Color.YELLOW; // Fase leve
+        } else if (infectionProbability < 0.4) {
+            buttonColor = Color.RED; // Fase un poco más leve
+        } else if (infectionProbability < 0.6) {
+            buttonColor = Color.BLUE; // Fase normal
+        } else {
+            buttonColor = Color.BLACK; // Fase super infectado
+        }
+
+        button.setBackground(buttonColor);
+        button.setOpaque(true);
     }
 
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        // Dibujar el mapa del mundo como fondo
         g.drawImage(worldMap, 0, 0, getWidth(), getHeight(), this);
+    }
+
+    public void onCure(String cityName) {
+        JButton button = cityButtons.get(cityName);
+        if (button != null) {
+            button.setBackground(null); // Eliminar el color del botón
+        }
     }
 }
