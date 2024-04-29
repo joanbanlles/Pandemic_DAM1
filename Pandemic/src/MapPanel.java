@@ -59,13 +59,14 @@ class MapPanel extends JPanel {
         addCity("Osaka", 1255, 320);
         addCity("Montreal", 350, 280);
         addCity("Paris", 727, 250);
+        addCity("Estambul", 830, 294);
 
         // Cargar la imagen del mapa del mundo
         worldMap = new ImageIcon("C:\\Users\\alumnat\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\mapa_mundo.png").getImage();
 
         // Configurar el layout del panel
         setLayout(null);
-        setPreferredSize(new Dimension(1500, 800));
+        setPreferredSize(new Dimension(1920, 1080)); // Tamaño de la pantalla estándar
 
         // Agregar los botones para cada ciudad
         for (String city : cities.keySet()) {
@@ -80,7 +81,14 @@ class MapPanel extends JPanel {
 
     private void addButton(String name, int x, int y) {
         JButton button = new JButton(name);
-        button.setBounds(x, y, 20, 20); // Tamaño y posición del botón
+        // Ajustar la posición del botón para centrarlo en la ciudad
+        button.setBounds(x - 10, y - 10, 20, 20); // Tamaño del botón
+
+        // Asignar una imagen al botón
+        ImageIcon icon = new ImageIcon("image_placeholder.jpg"); // Cambia "image_placeholder.jpg" por la imagen deseada
+        Image img = icon.getImage().getScaledInstance(20, 20, Image.SCALE_SMOOTH);
+        button.setIcon(new ImageIcon(img));
+
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
