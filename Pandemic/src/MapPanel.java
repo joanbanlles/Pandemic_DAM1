@@ -78,8 +78,8 @@ class MapPanel extends JPanel implements CureListener {
     }
 
     private void addCity(String name, int x, int y) {
-        int adjustedX = x - 67;
-        int adjustedY = y - 35;
+        int adjustedX = x - 65;
+        int adjustedY = y - 39;
 
         JButton button = new JButton(name);
         button.setBounds(adjustedX - 10, adjustedY - 10, 20, 20);
