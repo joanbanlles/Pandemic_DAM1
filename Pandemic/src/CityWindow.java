@@ -1,4 +1,4 @@
-package base;
+package pandemic;
 
 import javax.swing.*;
 import java.awt.*;

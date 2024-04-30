@@ -1,4 +1,4 @@
-package base;
+package pandemic;
 
 import javax.swing.*;
 import java.awt.*;
@@ -27,3 +27,4 @@ public class MapaDelMundo extends JFrame {
         SwingUtilities.invokeLater(MapaDelMundo::new);
     }
 }
+
