@@ -70,7 +70,7 @@ class MapPanel extends JPanel implements CureListener {
         addCity("Estambul", 830, 294);
 
         // Cargar la imagen del mapa del mundo
-        worldMap = new ImageIcon("C:\\Users\\alumnat\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\mapa_mundo.png").getImage();
+        worldMap = new ImageIcon("C:\\Users\\alumnat\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\mapa_mundo_color.png").getImage();
 
         // Configurar el layout del panel
         setLayout(null);
