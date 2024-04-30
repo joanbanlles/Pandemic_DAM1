@@ -70,7 +70,7 @@ class MapPanel extends JPanel implements CureListener {
         addCity("Estambul", 830, 294);
 
         // Cargar la imagen del mapa del mundo
-        worldMap = new ImageIcon("C:\\Users\\alumnat\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\mapa_mundo.png").getImage();
+        worldMap = new ImageIcon("C:\\Users\\alumnat\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\mapa_mundo_color.png").getImage();
 
         // Configurar el layout del panel
         setLayout(null);
@@ -78,8 +78,8 @@ class MapPanel extends JPanel implements CureListener {
     }
 
     private void addCity(String name, int x, int y) {
-        int adjustedX = x - 67;
-        int adjustedY = y - 35;
+        int adjustedX = x - 65;
+        int adjustedY = y - 39;
 
         JButton button = new JButton(name);
         button.setBounds(adjustedX - 10, adjustedY - 10, 20, 20);
