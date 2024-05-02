@@ -1,4 +1,4 @@
-package pandemic;
+package hola;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,7 +11,6 @@ class CityWindow extends JFrame {
         void onCure(String cityName);
     }
 
-    private JButton cityButton;
     private CureListener cureListener;
 
     // Definir colores y niveles de infección
@@ -22,56 +21,31 @@ class CityWindow extends JFrame {
         this.cureListener = (CureListener) mapPanel;
 
         setTitle(cityName);
-        setSize(400, 450);
+        setSize(100, 100); // Ajusta el tamaño según tus necesidades
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
-        JTextArea textArea = new JTextArea();
-        textArea.setEditable(false);
-        textArea.setPreferredSize(new Dimension(300, 200));
+        ImageIcon cureIcon = new ImageIcon("C:\\Users\\alumnat\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\tiritacura.png");
+        JButton cureButton = new JButton(cureIcon);
 
-        cityButton = new JButton(cityName);
+        // Establecer un tamaño más pequeño para el botón de cura
+        cureButton.setPreferredSize(new Dimension(50, 50));
 
-        JButton cureButton = new JButton("Cura");
         cureButton.addActionListener(new ActionListener() {
-            @Override
             public void actionPerformed(ActionEvent e) {
-                // Obtener el color actual del botón
-                Color currentColor = cityButton.getBackground();
-                int infectionLevel = -1;
-
-                // Buscar el nivel de infección correspondiente al color
-                for (int i = 0; i < infectionColors.length; i++) {
-                    if (currentColor.equals(infectionColors[i])) {
-                        infectionLevel = i;
-                        break;
-                    }
-                }
-
-                // Mostrar un mensaje indicando el nivel de infección antes de la cura
-                if (infectionLevel >= 0 && infectionLevel < infectionLevels.length) {
-                    JOptionPane.showMessageDialog(null, "La ciudad " + cityName + " estaba infectada al " + infectionLevels[infectionLevel]);
-                }
-
-                // Simular la cura eliminando el color del botón
-                cityButton.setBackground(null);
-
                 // Notificar al mapa que la ciudad ha sido curada
                 if (mapPanel != null) {
-                    mapPanel.onCure(cityName);
+                    cureListener.onCure(cityName);
                 }
 
                 // Mostrar un mensaje indicando que la ciudad ha sido curada
-                if (infectionLevel >= 0 && infectionLevel < infectionLevels.length) {
-                    JOptionPane.showMessageDialog(null, "La ciudad " + cityName + " se ha curado del " + infectionLevels[infectionLevel]);
-                }
+                JOptionPane.showMessageDialog(null, "La ciudad " + cityName + " ha sido curada.");
             }
         });
 
         setLayout(new BorderLayout());
-        add(new JScrollPane(textArea), BorderLayout.CENTER);
-        add(cureButton, BorderLayout.SOUTH);
-        add(cityButton, BorderLayout.WEST);
+        add(cureButton, BorderLayout.CENTER); // Añade el botón al centro de la ventana
 
         setVisible(true);
     }
 }
+

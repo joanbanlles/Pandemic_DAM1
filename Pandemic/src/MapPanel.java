@@ -1,8 +1,8 @@
-package pandemic;
+package hola;
 
 import javax.swing.*;
 
-import pandemic.CityWindow.CureListener;
+import hola.CityWindow.CureListener;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
