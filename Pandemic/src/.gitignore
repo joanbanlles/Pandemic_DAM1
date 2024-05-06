@@ -17,4 +17,11 @@
 /pantalla_incio.class
 /pantalla_partida$PantallaPartida.class
 /pantalla_partida.class
+<<<<<<< HEAD
 /GameMenu$1.class
+=======
+/CityWindow$1.class
+/GameMenu$1.class
+/CureListener.class
+/MapPanel$1.class
+>>>>>>> d1fe7fb24ade9287bc58189448cf3a2cbd0568ae
