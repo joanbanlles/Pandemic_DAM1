@@ -23,7 +23,7 @@ public class GameMenu extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // Cargar la imagen de fondo
-        ImageIcon backgroundImage = new ImageIcon("C:\\\\Users\\\\alumnat\\\\Documents\\\\GitHub\\\\Pandemic_DAM1\\\\Pandemic\\\\fonde de pantalla.gif");
+        ImageIcon backgroundImage = new ImageIcon("C:\\\\Users\\\\alumnat\\\\Documents\\\\GitHub\\\\Pandemic_DAM1\\\\Pandemic\\\\pantalla principal.gif");
 
         // Crear un panel para el menú sin bordes
         JPanel menuPanel = new JPanel() {
