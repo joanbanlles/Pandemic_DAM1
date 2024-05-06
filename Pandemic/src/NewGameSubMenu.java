@@ -61,3 +61,4 @@ public class NewGameSubMenu extends JDialog {
         setLocationRelativeTo(parent);
     }
 }
+

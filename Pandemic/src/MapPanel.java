@@ -1,8 +1,8 @@
-package pandemic;
+package hola;
 
 import javax.swing.*;
 
-import pandemic.CityWindow.CureListener;
+import hola.CityWindow.CureListener;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -72,9 +72,48 @@ class MapPanel extends JPanel implements CureListener {
         // Cargar la imagen del mapa del mundo
         worldMap = new ImageIcon("C:\\Users\\alumnat\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\mapa_mundo_color.png").getImage();
 
-        // Configurar el layout del panel
-        setLayout(null);
+        setLayout(new BorderLayout());
         setPreferredSize(new Dimension(1366, 768)); // Tamaño de la pantalla estándar
+
+     
+
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.setLayout(new GridLayout(4, 1)); // 4 filas, 1 columna
+
+        JButton button1 = new JButton("");
+        JButton button2 = new JButton("");
+        JButton button3 = new JButton("");
+        JButton button4 = new JButton("");
+
+        // Establecer el tamaño de los botones
+        int buttonWidth = 76; // Ancho deseado
+        int buttonHeight = 44; // Alto deseado
+        button1.setPreferredSize(new Dimension(buttonWidth, buttonHeight));
+        button2.setPreferredSize(new Dimension(buttonWidth, buttonHeight));
+        button3.setPreferredSize(new Dimension(buttonWidth, buttonHeight));
+        button4.setPreferredSize(new Dimension(buttonWidth, buttonHeight));
+
+        Font buttonFont = button1.getFont().deriveFont(Font.PLAIN, 1); // Tamaño de fuente más pequeño
+        button1.setFont(buttonFont);
+        button2.setFont(buttonFont);
+        button3.setFont(buttonFont);
+        button4.setFont(buttonFont);
+
+        // Establecer imágenes para los botones
+        button1.setIcon(new ImageIcon("C:\\Users\\alumnat\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna amarilla.png"));
+        button2.setIcon(new ImageIcon("C:\\Users\\alumnat\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna roja.png"));
+        button3.setIcon(new ImageIcon("C:\\Users\\alumnat\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna azul.png"));
+        button4.setIcon(new ImageIcon("C:\\Users\\alumnat\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna negra.png"));
+
+        buttonPanel.add(button1);
+        buttonPanel.add(button2);
+        buttonPanel.add(button3);
+        buttonPanel.add(button4);
+
+        // Agregar el panel de botones al lado derecho del mapa
+        add(new JScrollPane(buttonPanel), BorderLayout.EAST);
+
+
     }
 
     private void addCity(String name, int x, int y) {
