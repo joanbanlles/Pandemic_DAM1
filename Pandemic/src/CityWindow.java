@@ -1,4 +1,3 @@
-package hola;
 
 import javax.swing.*;
 import java.awt.*;
@@ -48,4 +47,3 @@ class CityWindow extends JFrame {
         setVisible(true);
     }
 }
-

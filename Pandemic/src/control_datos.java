@@ -1,6 +1,6 @@
 import java.util.ArrayList;
-public class control_datos {ç
-    private String url;
+public class control_datos {
+	private String url;
     private String user;
     private String password;
     private String ficheroTxt;
