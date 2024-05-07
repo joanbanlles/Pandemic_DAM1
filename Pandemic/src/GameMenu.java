@@ -22,7 +22,7 @@ public class GameMenu extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // Cargar la imagen de fondo
-        ImageIcon backgroundImage = new ImageIcon("C:\\Users\\miquel\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\fonde del menu.jpeg");
+        ImageIcon backgroundImage = new ImageIcon("C:\\\\Users\\\\alumnat\\\\Documents\\\\GitHub\\\\Pandemic_DAM1\\\\Pandemic\\\\pantalla principal.gif");
 
         // Crear un panel para el menú sin bordes
         JPanel menuPanel = new JPanel() {
@@ -37,15 +37,15 @@ public class GameMenu extends JFrame {
         menuPanel.setOpaque(false); // Fondo transparente
 
         // Usa imágenes para los botones del menú
-        JButton newGameButton = new JButton(new ImageIcon("C:\\Users\\miquel\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\NUEVA PARTIDA (13).gif"));
+        JButton newGameButton = new JButton(new ImageIcon("C:\\\\Users\\\\alumnat\\\\Documents\\\\GitHub\\\\Pandemic_DAM1\\\\Pandemic\\\\NUEVA PARTIDA (13).gif"));
         newGameButton.setPreferredSize(new Dimension(450, 55));
-        JButton loadGameButton = new JButton(new ImageIcon("C:\\Users\\miquel\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\CARGAR PARTIDA.gif"));
+        JButton loadGameButton = new JButton(new ImageIcon("C:\\\\Users\\\\alumnat\\\\Documents\\\\GitHub\\\\Pandemic_DAM1\\\\Pandemic\\\\CARGAR PARTIDA.gif"));
         loadGameButton.setPreferredSize(new Dimension(450, 55));
-        JButton infoButton = new JButton(new ImageIcon("C:\\Users\\miquel\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\INFORMACION.gif"));
+        JButton infoButton = new JButton(new ImageIcon("C:\\\\Users\\\\alumnat\\\\Documents\\\\GitHub\\\\Pandemic_DAM1\\\\Pandemic\\\\INFORMACION.gif"));
         infoButton.setPreferredSize(new Dimension(450, 55));
-        JButton scoresButton = new JButton(new ImageIcon("C:\\Users\\miquel\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\RESUMEN.gif"));
+        JButton scoresButton = new JButton(new ImageIcon("C:\\\\Users\\\\alumnat\\\\Documents\\\\GitHub\\\\Pandemic_DAM1\\\\Pandemic\\\\RESUMEN.gif"));
         scoresButton.setPreferredSize(new Dimension(450, 55));
-        JButton exitButton = new JButton(new ImageIcon("C:\\Users\\miquel\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\SALIR.gif"));
+        JButton exitButton = new JButton(new ImageIcon("C:\\\\Users\\\\alumnat\\\\Documents\\\\GitHub\\\\Pandemic_DAM1\\\\Pandemic\\\\SALIR.gif"));
         exitButton.setPreferredSize(new Dimension(450, 55));
         // Configura ActionListeners para los botones
         newGameButton.addActionListener(e -> System.out.println("Nueva partida"));
@@ -88,12 +88,6 @@ public class GameMenu extends JFrame {
         JPanel bottomPanel = new JPanel(new BorderLayout());
         bottomPanel.setOpaque(false);
 
-        JLabel versionLabel = new JLabel("Versión 1.0");
-        JLabel authorsLabel = new JLabel("Miquel Simo, Alejandro Paris, Joan Banlles");
-
-        // Añade elementos al panel inferior
-        bottomPanel.add(versionLabel, BorderLayout.EAST); // Versión en la esquina inferior izquierda
-        bottomPanel.add(authorsLabel, BorderLayout.WEST); // Autores en la esquina inferior derecha
 
         // Añadir el panel inferior y el menú principal
         setLayout(new BorderLayout());

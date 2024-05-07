@@ -1,3 +1,4 @@
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -8,7 +9,7 @@ class InfoButtonHandler implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         // Carga la imagen original
-        ImageIcon originalImage = new ImageIcon("C:\\Users\\miquel\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\imatge de informacio.png");
+        ImageIcon originalImage = new ImageIcon("C:\\Users\\alumnat\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\imatge de informacio.png");
 
         // Redimensiona la imagen a un tamaño más pequeño, por ejemplo, 200x200 píxeles
         Image scaledImage = originalImage.getImage().getScaledInstance(850, 850, Image.SCALE_SMOOTH);

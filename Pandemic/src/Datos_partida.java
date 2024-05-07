@@ -1,4 +1,11 @@
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.DocumentBuilder;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+import java.io.File;
 import java.util.ArrayList;
+
 public class Datos_partida {
     private ArrayList<Ciudad> ciudades;
     private ArrayList<Virus> virus;
@@ -7,9 +14,9 @@ public class Datos_partida {
     private int rondas;
     private float pDesarrollo;
     private int acciones;
-	private int brote;
+    private int brote;
 
-    public void DatosPartida() {
+    public Datos_partida() {
         this.ciudades = new ArrayList<>();
         this.virus = new ArrayList<>();
         this.vacunas = new ArrayList<>();
@@ -17,6 +24,31 @@ public class Datos_partida {
         this.rondas = 0;
         this.pDesarrollo = 0;
         this.acciones = 0;
+    }
+
+    public void cargarDatos() {
+        try {
+            File xmlFile = new File("C:\\Users\\alumnat\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic/parametros.xml");
+            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+            Document doc = dBuilder.parse(xmlFile);
+            doc.getDocumentElement().normalize();
+
+            NodeList nivelNodes = doc.getElementsByTagName("nivel");
+            for (int i = 0; i < nivelNodes.getLength(); i++) {
+                Element nivelElement = (Element) nivelNodes.item(i);
+                String id = nivelElement.getAttribute("id");
+                int numCiudadesInfectadasInicio = Integer.parseInt(nivelElement.getElementsByTagName("numCiudadesInfectadasInicio").item(0).getTextContent());
+                int numCuidadesInfectadasRonda = Integer.parseInt(nivelElement.getElementsByTagName("numCuidadesInfectadasRonda").item(0).getTextContent());
+                int numEnfermedadesActivasDerrota = Integer.parseInt(nivelElement.getElementsByTagName("numEnfermedadesActivasDerrota").item(0).getTextContent());
+                int numBrotesDerrota = Integer.parseInt(nivelElement.getElementsByTagName("numBrotesDerrota").item(0).getTextContent());
+
+                // Aquí puedes hacer lo que necesites con los datos del nivel, como almacenarlos en un ArrayList
+                // o utilizarlos de alguna otra manera.
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public ArrayList<Ciudad> getCiudades() {
@@ -78,7 +110,7 @@ public class Datos_partida {
     public void modificarCiudad(String nCiudad, int modificacion) {
         for (Ciudad ciudad : ciudades) {
             if (ciudad.getNombre().equals(nCiudad)) {
-                ciudad.setInfeccion(ciudad.aumentarInfeccion() + modificacion);
+               
                 break;
             }
         }
@@ -92,12 +124,8 @@ public class Datos_partida {
             }
         }
     }
-
-    public void cargarDatos() {
-        // Implement the logic to load data from a file or a database
-    }
 }
-	
+
 	
 
 

@@ -4,21 +4,21 @@
 <nivel id="facil">
     <numCiudadesInfectadasInicio>3</numCiudadesInfectadasInicio>
     <numCuidadesInfectadasRonda>3</numCuidadesInfectadasRonda>
-    <numEnfermedadesActivasDerrota>15</numEnfermedadesActivasDerrota>
+    <numEnfermedadesActivasDerrota>45</numEnfermedadesActivasDerrota>
     <numBrotesDerrota>7</numBrotesDerrota>
 </nivel>
 
 <nivel id="mitja">
     <numCiudadesInfectadasInicio>6</numCiudadesInfectadasInicio>
     <numCuidadesInfectadasRonda>5</numCuidadesInfectadasRonda>
-    <numEnfermedadesActivasDerrota>25</numEnfermedadesActivasDerrota>
+    <numEnfermedadesActivasDerrota>45</numEnfermedadesActivasDerrota>
     <numBrotesDerrota>8</numBrotesDerrota>
 </nivel>
 
 <nivel id="dificl">
     <numCiudadesInfectadasInicio>10</numCiudadesInfectadasInicio>
     <numCuidadesInfectadasRonda>7</numCuidadesInfectadasRonda>
-    <numEnfermedadesActivasDerrota>35</numEnfermedadesActivasDerrota>
+    <numEnfermedadesActivasDerrota>45</numEnfermedadesActivasDerrota>
     <numBrotesDerrota>9</numBrotesDerrota>
 </nivel>
 </parametros>
