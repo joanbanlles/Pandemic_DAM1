@@ -1,6 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
-public class control_partida {
+public class control_partida<Partida> {
 	   private Map<String, Partida> partidasGuardadas;
 	    private Partida partidaActual;
 
