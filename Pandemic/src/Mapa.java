@@ -10,7 +10,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
-
+// CREAME UN JPANEL QUE JUNTE MI CLASE MAPA Y PARTIDA, LAS CUALES SON JFRAME
 public class Mapa extends JFrame {
 
     public Mapa() {
@@ -26,7 +26,7 @@ public class Mapa extends JFrame {
         // Obtener las dimensiones originales de la imagen
 
         // Cargar la imagen del mapa
-        ImageIcon mapaImagen = new ImageIcon("C:\\Users\\alumnat\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\mapa_mundo.png");
+        ImageIcon mapaImagen = new ImageIcon("C:\\Users\\W10\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\mapa_mundo.png");
 
         // Obtener dimensiones originales y escalar imagen
 
