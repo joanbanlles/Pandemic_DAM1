@@ -1,15 +1,8 @@
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Image;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.HashMap;
-
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.SwingUtilities;
 
 public class Mapa extends JFrame {
 
@@ -22,14 +15,10 @@ public class Mapa extends JFrame {
         // Configuración del BorderLayout
         setLayout(new BorderLayout());
 
-        
-        // Obtener las dimensiones originales de la imagen
-
         // Cargar la imagen del mapa
         ImageIcon mapaImagen = new ImageIcon("C:\\Users\\alumnat\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\mapa_mundo.png");
 
         // Obtener dimensiones originales y escalar imagen
-
         int imagenAncho = mapaImagen.getIconWidth();
         int imagenAlto = mapaImagen.getIconHeight();
 
@@ -135,26 +124,53 @@ public class Mapa extends JFrame {
         JPanel panelIzquierdo = new JPanel();
         panelIzquierdo.setPreferredSize(new Dimension(150, 0));
 
-        JPanel panelDerecho = new JPanel(); // Panel para los botones
+        JPanel panelDerecho = new PanelBotones(); // Utilizar el panel de botones personalizado
         panelDerecho.setPreferredSize(new Dimension(150, 0));
 
         JPanel panelInferior = new JPanel();
         panelInferior.setPreferredSize(new Dimension(0, 190));
 
-        panelIzquierdo.setPreferredSize(new Dimension(150, 0)); // 50 píxeles de ancho
-        panelDerecho.setPreferredSize(new Dimension(150, 0));
-        panelInferior.setPreferredSize(new Dimension(0, 190)); // 50 píxeles de alto
+        // Crear los botones "Guardar Partida" y "Pasar Turno"
+        JButton guardarPartidaButton = new JButton("Guardar Partida");
+        JButton pasarTurnoButton = new JButton("Pasar Turno");
+
+        // Ajustar el botón "Guardar Partida"
+        guardarPartidaButton.setPreferredSize(new Dimension(180, 50)); // Tamaño más grande
+        guardarPartidaButton.setBounds(1500, 880, 180, 50); // Posición más abajo y a la derecha
+        
+        pasarTurnoButton.setPreferredSize(new Dimension(300, 150)); // Tamaño más grande
+        pasarTurnoButton.setBounds(1500, 880, 180, 50); // Posición más abajo y a la derecha
+
+        // Añadir acción al botón "Guardar Partida"
+        guardarPartidaButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Guardar Partida presionado");
+            }
+        });
+
+        // Añadir acción al botón "Pasar Turno"
+        pasarTurnoButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Pasar Turno presionado");
+            }
+        });
+
+        // Añadir botones al panel inferior
+        panelInferior.add(pasarTurnoButton);
+        panelInferior.add(guardarPartidaButton);
 
         // Añadir componentes al marco
         add(panelIzquierdo, BorderLayout.WEST);
         add(panelDerecho, BorderLayout.EAST); // Agregar el panel derecho con botones
         add(panelInferior, BorderLayout.SOUTH);
-        add(mapaLabel, BorderLayout.CENTER); // Agregar el mapa debajo del panel de botones
+        add(mapaLabel, BorderLayout.CENTER);
 
         setVisible(true);
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new Mapa());
+        SwingUtilities.invokeLater(Mapa::new);
     }
 }
