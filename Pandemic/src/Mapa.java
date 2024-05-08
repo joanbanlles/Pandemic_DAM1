@@ -4,6 +4,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
 
+<<<<<<< HEAD
+=======
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
+// CREAME UN JPANEL QUE JUNTE MI CLASE MAPA Y PARTIDA, LAS CUALES SON JFRAME
+>>>>>>> b1a11efd739f68c931f79adec4860dc961aa2c64
 public class Mapa extends JFrame {
 
     public Mapa() {

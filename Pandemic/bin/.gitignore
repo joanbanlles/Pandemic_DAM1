@@ -1,8 +1,57 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+/CityWindow$CureListener.class
+/CityWindow.class
+>>>>>>> 0c0d569d3cb62ff3b0dd65b54a75ad6b295cdb00
+/Ciudad.class
+/Clases$1Accion.class
+/Clases.class
+/Datos_partida.class
+<<<<<<< HEAD
+/GameMenu$1.class
+/GameMenu.class
+/InfoButtonHandler.class
+=======
+/GameMenu.class
+/InfoButtonHandler.class
+/MapPanel.class
+/MapaDelMundo.class
+>>>>>>> 0c0d569d3cb62ff3b0dd65b54a75ad6b295cdb00
+/NewGameSubMenu.class
+/Partida.class
+/Vacuna.class
+/Virus.class
+/control_datos.class
+/control_partida.class
+/pantalla_incio.class
+/pantalla_partida$PantallaPartida.class
+/pantalla_partida.class
+<<<<<<< HEAD
+/Mapa.class
+/Mapa$PanelImagenEscalada.class
+=======
+<<<<<<< HEAD
+/GameMenu$1.class
+=======
+/CityWindow$1.class
+/GameMenu$1.class
+/CureListener.class
+/MapPanel$1.class
+>>>>>>> d1fe7fb24ade9287bc58189448cf3a2cbd0568ae
+>>>>>>> 0c0d569d3cb62ff3b0dd65b54a75ad6b295cdb00
+/.classpath
+/.gitignore
+/.project
+/MapaMundo.class
+>>>>>>> b1a11efd739f68c931f79adec4860dc961aa2c64
 /Partida$1.class
 /Partida$2.class
 /Partida$3.class
 /Partida$4.class
 /Partida$5.class
+<<<<<<< HEAD
 /Partida.class
 /desktop.ini
 /PanelBotones.class
@@ -15,3 +64,7 @@
 /PanelBotones$7.class
 /Mapa$1.class
 /Mapa$2.class
+=======
+/desktop.ini
+/NewGameSubMenu$GameParameters.class
+>>>>>>> b1a11efd739f68c931f79adec4860dc961aa2c64
