@@ -17,7 +17,7 @@ public class Mapa extends JPanel {
         setLayout(new BorderLayout());
         
         // Cargar la imagen del mapa del mundo
-        ImageIcon mapaImagen = new ImageIcon("C:\\Users\\alumnat\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\mapa_mundo.png");
+        ImageIcon mapaImagen = new ImageIcon("C:\\Users\\W10\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\mapa_mundo.png");
         
         // Obtener las dimensiones originales de la imagen
         int imagenAncho = mapaImagen.getIconWidth();
@@ -82,5 +82,6 @@ public class Mapa extends JPanel {
 		
 	}
 }
+
 
 

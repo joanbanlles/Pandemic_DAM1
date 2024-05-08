@@ -6,7 +6,7 @@ public class Ciudad {
     private float coordenadaX;
     private float coordenadaY;
     private int idColor;
-    private int nivelInfeccion;
+    int nivelInfeccion;
 	private int infeccion;
 	public Object getNombre() {
 		// TODO Auto-generated method stub
@@ -51,6 +51,14 @@ public class Ciudad {
 	                ", ciudadesColindantes=" + Arrays.toString(ciudadesColindantes) +
 	                '}';
 	    }
+		public void curar() {
+			// TODO Auto-generated method stub
+			
+		}
+		public Object getNivelInfeccion() {
+			// TODO Auto-generated method stub
+			return null;
+		}
 	}
 
 
