@@ -1,16 +1,17 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class pantalla_partida {
+public class pantalla_partida<JuegoSwing, Partida> {
 
 
 	public class PantallaPartida {
 	    private Map<String, Runnable> botonListeners;
-	    private Partida partida;
+	    private JuegoSwing partida;
+		private Object JuegoSwing;
 
 	    public PantallaPartida() {
 	        this.botonListeners = new HashMap<>();
-	        this.partida = null;
+	        this.JuegoSwing = null;
 	    }
 
 	    public void addBotonListener(String nombreBoton, Runnable listener) {
@@ -50,7 +51,7 @@ public class pantalla_partida {
 	    }
 
 	    public void setPartida(Partida partida) {
-	        this.partida = partida;
+	        this.partida = (JuegoSwing) partida;
 	    }
 
 	    public void executeButtonAction(String nombreBoton) {

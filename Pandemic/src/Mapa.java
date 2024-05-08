@@ -9,7 +9,7 @@ public class Mapa extends JPanel {
     public Mapa() {
         
         // Configurar la ventana principal
-        setTitle("Mapa del Mundo");
+        setLocale("Mapa del Mundo");
         setSize(1920, 1080); // Tamaño de la ventana
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Acción al cerrar la ventana
         
@@ -72,8 +72,15 @@ public class Mapa extends JPanel {
         setVisible(true);
     }
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new Mapa()); // Crear la ventana
->>>>>>> d1e228eafe255e215e8979eaeea7a7abbcf6db92
-    }
+    private void setLocale(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void setDefaultCloseOperation(int exitOnClose) {
+		// TODO Auto-generated method stub
+		
+	}
 }
+
+
