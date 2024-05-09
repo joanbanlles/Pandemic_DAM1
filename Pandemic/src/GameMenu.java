@@ -47,9 +47,11 @@ public class GameMenu extends JFrame {
         scoresButton.setPreferredSize(new Dimension(450, 55));
         JButton exitButton = new JButton(new ImageIcon("C:\\\\Users\\\\alumnat\\\\Documents\\\\GitHub\\\\Pandemic_DAM1\\\\Pandemic\\\\SALIR.gif"));
         exitButton.setPreferredSize(new Dimension(450, 55));
+        
         // Configura ActionListeners para los botones
         newGameButton.addActionListener(e -> System.out.println("Nueva partida"));
         loadGameButton.addActionListener(e -> System.out.println("Cargar partida"));
+        scoresButton.addActionListener(e -> System.out.println("Resultados de partida"));
         exitButton.addActionListener(e -> System.exit(0)); // Salir del programa
 
         // Asigna el manejador para el botón de información
