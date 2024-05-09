@@ -1,5 +1,3 @@
-
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -28,6 +26,7 @@ public class NewGameSubMenu extends JDialog {
         if (backgroundImage != null) {
             JLabel backgroundLabel = new JLabel(new ImageIcon(backgroundImage));
             backgroundLabel.setLayout(new BorderLayout());
+            
             setContentPane(backgroundLabel);
         }
 
