@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class resultados extends JFrame {
 
@@ -7,7 +9,7 @@ public class resultados extends JFrame {
         // Configura el título y el tamaño de la ventana
         setTitle("Ventana con Fondo");
         setSize(1920, 1080);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // Cambiar a DISPOSE_ON_CLOSE para evitar cerrar toda la aplicación
 
         // Crea un panel con un fondo de imagen
         JPanel panelConFondo = new PanelConFondo("fonde del menu.jpeg");
@@ -27,12 +29,22 @@ public class resultados extends JFrame {
         JButton boton4 = new JButton(new ImageIcon("volver.png"));
         boton4.setPreferredSize(new Dimension(350, 55));
 
-        
         // Añade los botones al panel
         panelBotones.add(boton1);
         panelBotones.add(boton2);
         panelBotones.add(boton3);
         panelBotones.add(boton4);
+
+        // Configurar el ActionListener para boton4
+        boton4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Abre la ventana de GameMenu
+                new GameMenu().setVisible(true);
+                // Cierra la ventana actual de resultados
+                dispose();
+            }
+        });
 
         // Añade el panel de botones a la parte superior del panel con fondo
         panelConFondo.add(panelBotones, BorderLayout.NORTH);
