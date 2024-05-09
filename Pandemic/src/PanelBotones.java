@@ -16,17 +16,18 @@ class PanelBotones extends JPanel {
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
         // Crear botones y etiquetas
-        JButton boton1 = new JButton(new ImageIcon("C:\\Users\\W10\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna amarilla.png"));
-        JLabel porcentaje1 = new JLabel(String.format("%.2f%%", porcentajeActual1));
+// Crear botones y etiquetas
+JButton boton1 = new JButton(new ImageIcon("C:\\Users\\W10\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna amarilla.png"));
+JLabel porcentaje1 = new JLabel(String.format("%.2f%%", porcentajeActual1));
 
-        JButton boton2 = new JButton(new ImageIcon("C:\\Users\\W10\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna roja.png"));
-        JLabel porcentaje2 = new JLabel(String.format("%.2f%%", porcentajeActual2));
+JButton boton2 = new JButton(new ImageIcon("C:\\Users\\W10\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna roja.png"));
+JLabel porcentaje2 = new JLabel(String.format("%.2f%%", porcentajeActual2));
 
-        JButton boton3 = new JButton(new ImageIcon("C:\\Users\\W10\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna azul.png"));
-        JLabel porcentaje3 = new JLabel(String.format("%.2f%%", porcentajeActual3));
+JButton boton3 = new JButton(new ImageIcon("C:\\Users\\W10\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna azul.png"));
+JLabel porcentaje3 = new JLabel(String.format("%.2f%%", porcentajeActual3));
 
-        JButton boton4 = new JButton(new ImageIcon("C:\\Users\\W10\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna negra.png"));
-        JLabel porcentaje4 = new JLabel(String.format("%.2f%%", porcentajeActual4));
+JButton boton4 = new JButton(new ImageIcon("C:\\Users\\W10\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna negra.png"));
+JLabel porcentaje4 = new JLabel(String.format("%.2f%%", porcentajeActual4));
 
         // Configura los ActionListeners para incrementar los porcentajes
         boton1.addActionListener(e -> incrementarPorcentaje(porcentaje1, 1));
