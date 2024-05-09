@@ -1,22 +1,20 @@
-<<<<<<< HEAD
-=======
-/CityWindow$CureListener.class
+
+
 /CityWindow.class
->>>>>>> 0c0d569d3cb62ff3b0dd65b54a75ad6b295cdb00
+
 /Ciudad.class
-/Clases$1Accion.class
+
 /Clases.class
 /Datos_partida.class
-<<<<<<< HEAD
-/GameMenu$1.class
+
 /GameMenu.class
 /InfoButtonHandler.class
-=======
+
 /GameMenu.class
 /InfoButtonHandler.class
 /MapPanel.class
 /MapaDelMundo.class
->>>>>>> 0c0d569d3cb62ff3b0dd65b54a75ad6b295cdb00
+
 /NewGameSubMenu.class
 /Partida.class
 /Vacuna.class
@@ -26,19 +24,23 @@
 /pantalla_incio.class
 /pantalla_partida$PantallaPartida.class
 /pantalla_partida.class
-<<<<<<< HEAD
 /Mapa.class
 /Mapa$PanelImagenEscalada.class
-=======
-<<<<<<< HEAD
+
 /GameMenu$1.class
-=======
 /CityWindow$1.class
 /GameMenu$1.class
 /CureListener.class
 /MapPanel$1.class
+<<<<<<< Updated upstream
+
+
+/Mapa$1.class
+/Mapa$2.class
+=======
 >>>>>>> d1fe7fb24ade9287bc58189448cf3a2cbd0568ae
 >>>>>>> 0c0d569d3cb62ff3b0dd65b54a75ad6b295cdb00
+<<<<<<< HEAD
 <<<<<<< HEAD
 /.classpath
 /.gitignore
@@ -47,13 +49,26 @@
 /Mapa$1.class
 /Mapa$2.class
 /NewGameSubMenu$GameParameters.class
+=======
+>>>>>>> Stashed changes
+>>>>>>> 4368f1eefad4bd58f801731478bfe92b3522a0cc
 /PanelBotones$1.class
 /PanelBotones$2.class
 /PanelBotones$3.class
 /PanelBotones$4.class
 /PanelBotones$5.class
+<<<<<<< HEAD
 /PanelBotones.class
 /Partida$1.class
 /Partida$2.class
 =======
 >>>>>>> 01c4931d968ef4b7bf45908762c654aa4a268ad2
+=======
+<<<<<<< Updated upstream
+/PanelBotones$6.class
+
+
+=======
+/PanelBotones.class
+>>>>>>> Stashed changes
+>>>>>>> 4368f1eefad4bd58f801731478bfe92b3522a0cc
