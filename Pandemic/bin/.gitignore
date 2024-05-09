@@ -1,7 +1,5 @@
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
 /CityWindow$CureListener.class
 /CityWindow.class
 >>>>>>> 0c0d569d3cb62ff3b0dd65b54a75ad6b295cdb00
@@ -41,36 +39,3 @@
 /MapPanel$1.class
 >>>>>>> d1fe7fb24ade9287bc58189448cf3a2cbd0568ae
 >>>>>>> 0c0d569d3cb62ff3b0dd65b54a75ad6b295cdb00
-<<<<<<< Updated upstream
-/.classpath
-/.gitignore
-/.project
-/MapaMundo.class
->>>>>>> b1a11efd739f68c931f79adec4860dc961aa2c64
-/Partida$1.class
-/Partida$2.class
-/Partida$3.class
-/Partida$4.class
-/Partida$5.class
-<<<<<<< HEAD
-/Partida.class
-/desktop.ini
-=======
->>>>>>> Stashed changes
-/PanelBotones.class
-/PanelBotones$1.class
-/PanelBotones$2.class
-/PanelBotones$3.class
-/PanelBotones$4.class
-<<<<<<< Updated upstream
-/PanelBotones$5.class
-/PanelBotones$6.class
-/PanelBotones$7.class
-/Mapa$1.class
-/Mapa$2.class
-=======
-/desktop.ini
-/NewGameSubMenu$GameParameters.class
->>>>>>> b1a11efd739f68c931f79adec4860dc961aa2c64
-=======
->>>>>>> Stashed changes
