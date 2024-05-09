@@ -4,16 +4,14 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-
 public class GameMenu extends JFrame {
     public GameMenu() {
         super("Menú del Juego");
 
-        // Ajustar el tamaño del JFrame según la resolución de la pantalla
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        int screenWidth = screenSize.width;
-        int screenHeight = screenSize.height;
-        setSize(screenWidth / 2, screenHeight / 2); // Hacerlo proporcional a la pantalla
+        // Ajustar el tamaño del JFrame a 1920x1080
+        int frameWidth = 1920;
+        int frameHeight = 1080;
+        setSize(frameWidth, frameHeight); 
 
         // Centrar la ventana
         setLocationRelativeTo(null);
@@ -22,9 +20,9 @@ public class GameMenu extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // Cargar la imagen de fondo
-        ImageIcon backgroundImage = new ImageIcon("C:\\\\Users\\\\alumnat\\\\Documents\\\\GitHub\\\\Pandemic_DAM1\\\\Pandemic\\\\pantalla principal.gif");
+        ImageIcon backgroundImage = new ImageIcon("pantalla principal.gif");
 
-        // Crear un panel para el menú sin bordes
+        // Crear un panel para el menú
         JPanel menuPanel = new JPanel() {
             @Override
             protected void paintComponent(Graphics g) {
@@ -37,33 +35,44 @@ public class GameMenu extends JFrame {
         menuPanel.setOpaque(false); // Fondo transparente
 
         // Usa imágenes para los botones del menú
-        JButton newGameButton = new JButton(new ImageIcon("C:\\\\Users\\\\alumnat\\\\Documents\\\\GitHub\\\\Pandemic_DAM1\\\\Pandemic\\\\NUEVA PARTIDA (13).gif"));
+        JButton newGameButton = new JButton(new ImageIcon("NUEVA PARTIDA (13).gif"));
         newGameButton.setPreferredSize(new Dimension(450, 55));
-        JButton loadGameButton = new JButton(new ImageIcon("C:\\\\Users\\\\alumnat\\\\Documents\\\\GitHub\\\\Pandemic_DAM1\\\\Pandemic\\\\CARGAR PARTIDA.gif"));
-        loadGameButton.setPreferredSize(new Dimension(450, 55));
-        JButton infoButton = new JButton(new ImageIcon("C:\\\\Users\\\\alumnat\\\\Documents\\\\GitHub\\\\Pandemic_DAM1\\\\Pandemic\\\\INFORMACION.gif"));
-        infoButton.setPreferredSize(new Dimension(450, 55));
-        JButton scoresButton = new JButton(new ImageIcon("C:\\\\Users\\\\alumnat\\\\Documents\\\\GitHub\\\\Pandemic_DAM1\\\\Pandemic\\\\RESUMEN.gif"));
-        scoresButton.setPreferredSize(new Dimension(450, 55));
-        JButton exitButton = new JButton(new ImageIcon("C:\\\\Users\\\\alumnat\\\\Documents\\\\GitHub\\\\Pandemic_DAM1\\\\Pandemic\\\\SALIR.gif"));
-        exitButton.setPreferredSize(new Dimension(450, 55));
-        
-        // Configura ActionListeners para los botones
-        newGameButton.addActionListener(e -> System.out.println("Nueva partida"));
-        loadGameButton.addActionListener(e -> System.out.println("Cargar partida"));
-        scoresButton.addActionListener(e -> System.out.println("Resultados de partida"));
-        exitButton.addActionListener(e -> System.exit(0)); // Salir del programa
 
-        // Asigna el manejador para el botón de información
-        infoButton.addActionListener(new InfoButtonHandler());
-        
-        // Configura ActionListeners para cada botón
+        JButton loadGameButton = new JButton(new ImageIcon("CARGAR PARTIDA.gif"));
+        loadGameButton.setPreferredSize(new Dimension(450, 55));
+
+        JButton infoButton = new JButton(new ImageIcon("INFORMACION.gif"));
+        infoButton.setPreferredSize(new Dimension(450, 55));
+
+        JButton scoresButton = new JButton(new ImageIcon("RESUMEN.gif"));
+        scoresButton.setPreferredSize(new Dimension(450, 55));
+
+        JButton exitButton = new JButton(new ImageIcon("SALIR.gif"));
+        exitButton.setPreferredSize(new Dimension(450, 55));
+
+        // Configurar ActionListeners para cada botón
         newGameButton.addActionListener(e -> {
-            NewGameSubMenu subMenu = new NewGameSubMenu(this); // Instancia el submenú
-            subMenu.setVisible(true); // Muestra el submenú al hacer clic
+            // Ejemplo de abrir un submenú
+            NewGameSubMenu subMenu = new NewGameSubMenu(this);
+            subMenu.setVisible(true);
         });
 
         loadGameButton.addActionListener(e -> System.out.println("Cargar partida"));
+
+        // ActionListener para el botón de resultados (scoresButton)
+        scoresButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Abrir la ventana de resultados
+                resultados resultWindow = new resultados();
+                resultWindow.setVisible(true);
+                // Cerrar el GameMenu
+                dispose();
+            }
+        });
+
+        infoButton.addActionListener(new InfoButtonHandler());
+
         exitButton.addActionListener(e -> System.exit(0)); // Salir del programa
 
         // Añadir botones al panel principal
@@ -86,19 +95,11 @@ public class GameMenu extends JFrame {
         gbc.gridy = 4;
         menuPanel.add(exitButton, gbc);
 
-        // Panel inferior
-        JPanel bottomPanel = new JPanel(new BorderLayout());
-        bottomPanel.setOpaque(false);
-
-
-        // Añadir el panel inferior y el menú principal
+        // Añadir el panel al JFrame
         setLayout(new BorderLayout());
         add(menuPanel, BorderLayout.CENTER);
-        add(bottomPanel, BorderLayout.SOUTH); // Panel inferior
 
-        // Configuración del JFrame
-        setSize(1500, 1000);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Configuración de cierre
         setLocationRelativeTo(null); // Centra la ventana
         setVisible(true);
     }

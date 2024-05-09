@@ -90,7 +90,13 @@
 >>>>>>> Stashed changes
 >>>>>>> 4368f1eefad4bd58f801731478bfe92b3522a0cc
 >>>>>>> 50109dd38ef1bcced6ba27bf808fda0354b8bb17
+<<<<<<< HEAD
 /Juego.class
 /resultados$1.class
 /resultados$2.class
 /resultados$3.class
+=======
+/resultados$1.class
+/GameMenu$2.class
+/GameMenu$BackgroundPanel.class
+>>>>>>> 6008c6e69661a3022db3017ba91ec54aefc21911
