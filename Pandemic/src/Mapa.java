@@ -120,7 +120,7 @@ public class Mapa extends JFrame {
                 y += 20; // Mover hacia abajo
             }
 
-            botonCiudad.setBounds(x, y, 10, 10); // Establecer las coordenadas y tamaño del botón
+            botonCiudad.setBounds(x, y, 15, 15); // Establecer las coordenadas y tamaño del botón
             botonCiudad.setBackground(Color.BLACK); // Color del botón
             botonCiudad.setOpaque(true); // Hacer el botón opaco
             mapaLabel.add(botonCiudad); // Agregar el botón al mapa
