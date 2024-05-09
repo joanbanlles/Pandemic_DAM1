@@ -6,60 +6,47 @@ import java.awt.*;
 import java.util.HashMap;
 
 class PanelBotones extends JPanel {
+    // Declarar panelInferior como variable de instancia
+    private JPanel panelInferior;
+
     public PanelBotones() {
-        // Usar un GridLayout para colocar los botones uno debajo del otro
+        // Configura el diseño del panel principal
         setLayout(new GridLayout(5, 1, 10, 10)); // 5 filas, 1 columna, espacio entre botones
 
- 
+        // Inicializa panelInferior con una instancia de JPanel o Container
+        panelInferior = new JPanel();  // Podrías usar GridLayout u otro Layout
 
-        // Crear cuatro botones con imágenes
-        JButton boton1 = new JButton(new ImageIcon("C:\\Users\\miquel\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna amarilla.png"));
-        JButton boton2 = new JButton(new ImageIcon("C:\\Users\\miquel\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna roja.png"));
-        JButton boton3 = new JButton(new ImageIcon("C:\\Users\\miquel\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna azul.png"));
-        JButton boton4 = new JButton(new ImageIcon("C:\\Users\\miquel\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna negra.png"));
+        // Crear botones
+        JButton boton1 = new JButton(new ImageIcon("C:\\Users\\SPK Pc Gaming\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna amarilla.png"));
+        JButton boton2 = new JButton(new ImageIcon("C:\\Users\\SPK Pc Gaming\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna roja.png"));
+        JButton boton3 = new JButton(new ImageIcon("C:\\Users\\SPK Pc Gaming\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna azul.png"));
+        JButton boton4 = new JButton(new ImageIcon("C:\\Users\\SPK Pc Gaming\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna negra.png"));
+        JButton curarButton1 = new JButton(new ImageIcon("C:\\Users\\SPK Pc Gaming\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\tiritacura.png"));
 
-        JButton boton5 = new JButton(new ImageIcon("C:\\Users\\miquel\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\tiritacura.png"));
+        // Añadir acción a los botones
+        boton1.addActionListener(e -> System.out.println("Botón 1 presionado"));
+        boton2.addActionListener(e -> System.out.println("Botón 2 presionado"));
+        boton3.addActionListener(e -> System.out.println("Botón 3 presionado"));
+        boton4.addActionListener(e -> System.out.println("Botón 4 presionado"));
 
-        // Añadir acción a los botones (ejemplo simple)
-        boton1.addActionListener(new ActionListener() {
+        // Crea un botón curar ciudad
+
+        
+        curarButton1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Botón 1 presionado");
+                // Lógica para curar ciudad
             }
         });
 
-        boton2.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("Botón 2 presionado");
-            }
-        });
+        // Añade el botón curar ciudad al panel principal (PanelBotones)
+        add(curarButton1);
 
-        boton3.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("Botón 3 presionado");
-            }
-        });
-
-        boton4.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("Botón 4 presionado");
-            }
-        });
-        boton5.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("Botón 4 presionado");
-            }
-        });
-
-        // Añadir botones al panel
+        // Añadir otros botones al panel principal
         add(boton1);
         add(boton2);
         add(boton3);
         add(boton4);
-        add(boton5);
+        add(curarButton1);
     }
 }
