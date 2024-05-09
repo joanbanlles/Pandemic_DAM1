@@ -119,7 +119,7 @@ class Partida {
 	        this.partida.actualizarEstado();
 	    }
 
-		panelInferior.add(curarButton);
+
 
 
 

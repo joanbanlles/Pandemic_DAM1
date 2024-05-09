@@ -59,6 +59,10 @@ public class Ciudad {
 			// TODO Auto-generated method stub
 			return null;
 		}
+		public static int size() {
+			// TODO Auto-generated method stub
+			return 0;
+		}
 	}
 
 
