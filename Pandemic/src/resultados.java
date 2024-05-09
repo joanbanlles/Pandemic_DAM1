@@ -18,15 +18,14 @@ public class resultados extends JFrame {
         panelBotones.setOpaque(false); // Hace que el panel sea transparente para ver el fondo
 
         // Carga las imágenes para los botones
-        ImageIcon icon1 = new ImageIcon("icon1.png");
-        ImageIcon icon2 = new ImageIcon("icon2.png");
-        ImageIcon icon3 = new ImageIcon("icon3.png");
+        JButton boton1 = new JButton(new ImageIcon("PUNTUACION F.png"));
+        boton1.setPreferredSize(new Dimension(350, 55));
+        JButton boton2 = new JButton(new ImageIcon("PUNTUACION M.png"));
+        boton2.setPreferredSize(new Dimension(350, 55));
+        JButton boton3 = new JButton(new ImageIcon("PUNTUACION D.png"));
+        boton3.setPreferredSize(new Dimension(350, 55));
 
-        // Crea los botones con las imágenes
-        JButton boton1 = new JButton("Botón 1", icon1);
-        JButton boton2 = new JButton("Botón 2", icon2);
-        JButton boton3 = new JButton("Botón 3", icon3);
-
+        
         // Añade los botones al panel
         panelBotones.add(boton1);
         panelBotones.add(boton2);
