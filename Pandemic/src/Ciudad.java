@@ -51,7 +51,7 @@ public class Ciudad {
 	                ", ciudadesColindantes=" + Arrays.toString(ciudadesColindantes) +
 	                '}';
 	    }
-		public void curar() {
+		public void curarciudad() {
 			// TODO Auto-generated method stub
 			
 		}

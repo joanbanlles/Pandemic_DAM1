@@ -72,66 +72,25 @@ class Partida {
 	    curarButton.addActionListener(new ActionListener() {
 	        @Override
 	        public void actionPerformed(ActionEvent e) {
-	            boolean ciudadCurada = false;
-	            while (!ciudadCurada) {
-	                try {
-	                    String ciudadString = JOptionPane.showInputDialog(frame, "Ingrese el índice de la ciudad a curar (0-3):");
-	                    if (ciudadString == null) {
-	                        // El usuario canceló la entrada.
-	                        return;
-	                    }
-
-	                    int indiceCiudad = Integer.parseInt(ciudadString);
-
-	                    if (indiceCiudad >= 0 && indiceCiudad < ciudades.size()) {
-	                        curarCiudad(indiceCiudad);
-	                        ciudadCurada = true;
-	                    } else {
-	                        JOptionPane.showMessageDialog(frame, "Índice fuera de rango. Por favor, ingrese un número entre 0 y 3.");
-	                    }
-	                } catch (NumberFormatException ex) {
-	                    JOptionPane.showMessageDialog(frame, "Entrada inválida. Por favor, ingrese un número entero entre 0 y 3.");
-	                }
-	            }
-	            actualizarEstado();
-	        }
-	    });
-
-	    JButton desarrollarButton = new JButton("Desarrollar vacuna");
-	    desarrollarButton.addActionListener(new ActionListener() {
-	        @Override
-	        public void actionPerformed(ActionEvent e) {
-	            desarrollarVacuna();
-	            actualizarEstado();
-	        }
-	    });
-
-	    JButton guardarButton = new JButton("Guardar partida");
-	    guardarButton.addActionListener(new ActionListener() {
-	        @Override
-	        public void actionPerformed(ActionEvent e) {
-	            try {
-	                guardarPartida("partida.txt");
-	                JOptionPane.showMessageDialog(frame, "Partida guardada.");
-	            } catch (IOException ex) {
-	                JOptionPane.showMessageDialog(frame, "Error al guardar la partida.");
+	            // Obtener el índice de la ciudad seleccionada.
+	            int indiceCiudad = obtenerCiudadSeleccionada();
+	            
+	            // Verificar si el índice de la ciudad seleccionada es válido.
+	            if (indiceCiudad >= 0 && indiceCiudad < ciudades.size()) {
+	                // Curar la ciudad con el índice seleccionado.
+	                curarCiudad(indiceCiudad);
+	                
+	                // Actualizar el estado después de curar la ciudad.
+	                actualizarEstado();
+	            } else {
+	                // Mostrar un mensaje de error si la ciudad seleccionada no es válida.
+	                JOptionPane.showMessageDialog(frame, "Ciudad seleccionada inválida. Por favor, seleccione una ciudad válida.");
 	            }
 	        }
 	    });
 
-	    JButton cargarButton = new JButton("Cargar partida");
-	    cargarButton.addActionListener(new ActionListener() {
-	        @Override
-	        public void actionPerformed(ActionEvent e) {
-	            try {
-	                cargarPartida("partida.txt");
-	                JOptionPane.showMessageDialog(frame, "Partida cargada.");
-	            } catch (IOException ex) {
-	                JOptionPane.showMessageDialog(frame, "Error al cargar la partida.");
-	            }
-	            actualizarEstado();
-	        }
-	    });
+
+
 
 	    JButton finalizarButton = new JButton("Finalizar turno");
 	    finalizarButton.addActionListener(new ActionListener() {
@@ -143,9 +102,9 @@ class Partida {
 	    });
 
 	    panelInferior.add(curarButton);
-	    panelInferior.add(desarrollarButton);
-	    panelInferior.add(guardarButton);
-	    panelInferior.add(cargarButton);
+
+
+
 	    panelInferior.add(finalizarButton);
 
 	    panel.add(panelInferior);
@@ -156,13 +115,15 @@ class Partida {
 	    frame.pack();
 	    frame.setVisible(true);
 
-	    actualizarEstado();
-	
+	    if (this.partida != null) {
+	        this.partida.actualizarEstado();
+	    }
 
 		panelInferior.add(curarButton);
-		panelInferior.add(desarrollarButton);
-		panelInferior.add(guardarButton);
-		panelInferior.add(cargarButton);
+
+
+
+		
 		panelInferior.add(finalizarButton);
 
 		panel.add(panelInferior);
@@ -176,46 +137,20 @@ class Partida {
 		actualizarEstado();
 	}
 
+	protected int obtenerCiudadSeleccionada() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 	public void curarCiudad(int indiceCiudad) {
 		if (indiceCiudad >= 0 && indiceCiudad < ciudades.size()) {
-			ciudades.get(indiceCiudad).curar();
+			ciudades.get(indiceCiudad).curarciudad();
 		}
 	}
 
-	public void desarrollarVacuna() {
-		if (desarrolloVacuna < 100) {
-			desarrolloVacuna++;
-		}
-	}
 
-	public void guardarPartida(String archivo) throws IOException {
-		try (BufferedWriter writer = new BufferedWriter(new FileWriter(archivo))) {
-			writer.write("Rondas: " + rondas + "\n");
-			writer.write("Desarrollo de la vacuna: " + desarrolloVacuna + "\n");
-			writer.write("Ciudades:\n");
-			for (Ciudad ciudad : ciudades) {
-				writer.write(ciudad.getNombre() + "," + ciudad.getNivelInfeccion() + "\n");
-			}
-		}
-	}
 
-	public void cargarPartida(String archivo) throws IOException {
-		try (BufferedReader reader = new BufferedReader(new FileReader(archivo))) {
-			rondas = Integer.parseInt(reader.readLine().split(": ")[1]);
-			desarrolloVacuna = Integer.parseInt(reader.readLine().split(": ")[1]);
-			ciudades.clear();
-			reader.readLine(); // Salta la línea de "Ciudades:"
-			String linea;
-			while ((linea = reader.readLine()) != null) {
-				String[] partes = linea.split(",");
-				String nombreCiudad = partes[0];
-				int nivelInfeccion = Integer.parseInt(partes[1]);
-				Ciudad ciudad = new Ciudad();
-				ciudad.nivelInfeccion = nivelInfeccion;
-				ciudades.add(ciudad);
-			}
-		}
-	}
+
 
 	public void finalizarTurno() {
 		rondas++;
