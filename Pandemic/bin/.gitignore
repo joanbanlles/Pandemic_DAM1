@@ -39,6 +39,7 @@
 /MapPanel$1.class
 >>>>>>> d1fe7fb24ade9287bc58189448cf3a2cbd0568ae
 >>>>>>> 0c0d569d3cb62ff3b0dd65b54a75ad6b295cdb00
+<<<<<<< HEAD
 /.classpath
 /.gitignore
 /.project
@@ -54,3 +55,5 @@
 /PanelBotones.class
 /Partida$1.class
 /Partida$2.class
+=======
+>>>>>>> 01c4931d968ef4b7bf45908762c654aa4a268ad2
