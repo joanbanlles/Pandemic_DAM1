@@ -12,7 +12,7 @@ public class resultados extends JFrame {
 
     public resultados() {
         // Configura el título y el tamaño de la ventana
-        setTitle("Ventana con Fondo");
+        setTitle("Resultados de partida");
         setSize(1920, 1080);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // Cambiar a DISPOSE_ON_CLOSE para evitar cerrar toda la aplicación
 
