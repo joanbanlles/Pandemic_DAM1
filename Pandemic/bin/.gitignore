@@ -32,15 +32,24 @@
 /GameMenu$1.class
 /CureListener.class
 /MapPanel$1.class
+<<<<<<< Updated upstream
 
 
 /Mapa$1.class
 /Mapa$2.class
+=======
+>>>>>>> d1fe7fb24ade9287bc58189448cf3a2cbd0568ae
+>>>>>>> 0c0d569d3cb62ff3b0dd65b54a75ad6b295cdb00
+>>>>>>> Stashed changes
 /PanelBotones$1.class
 /PanelBotones$2.class
 /PanelBotones$3.class
 /PanelBotones$4.class
 /PanelBotones$5.class
+<<<<<<< Updated upstream
 /PanelBotones$6.class
 
 
+=======
+/PanelBotones.class
+>>>>>>> Stashed changes

@@ -2,23 +2,28 @@
 <parametros>
 
 <nivel id="facil">
-    <numCiudadesInfectadasInicio>3</numCiudadesInfectadasInicio>
+    <numCiudadesInfectadasInicio>6</numCiudadesInfectadasInicio>
     <numCuidadesInfectadasRonda>3</numCuidadesInfectadasRonda>
-    <numEnfermedadesActivasDerrota>45</numEnfermedadesActivasDerrota>
+    <numEnfermedadesActivasDerrota>11</numEnfermedadesActivasDerrota>
     <numBrotesDerrota>7</numBrotesDerrota>
+    <incrementoporcentajevacuna>30</incrementoporcentajevacuna>
 </nivel>
 
 <nivel id="mitja">
-    <numCiudadesInfectadasInicio>6</numCiudadesInfectadasInicio>
+    <numCiudadesInfectadasInicio>8</numCiudadesInfectadasInicio>
     <numCuidadesInfectadasRonda>5</numCuidadesInfectadasRonda>
     <numEnfermedadesActivasDerrota>45</numEnfermedadesActivasDerrota>
     <numBrotesDerrota>8</numBrotesDerrota>
+    <incrementoporcentajevacuna>25</incrementoporcentajevacuna>
+
 </nivel>
 
 <nivel id="dificl">
-    <numCiudadesInfectadasInicio>10</numCiudadesInfectadasInicio>
+    <numCiudadesInfectadasInicio>11</numCiudadesInfectadasInicio>
     <numCuidadesInfectadasRonda>7</numCuidadesInfectadasRonda>
     <numEnfermedadesActivasDerrota>45</numEnfermedadesActivasDerrota>
     <numBrotesDerrota>9</numBrotesDerrota>
+    <incrementoporcentajevacuna>20</incrementoporcentajevacuna>
+
 </nivel>
 </parametros>
