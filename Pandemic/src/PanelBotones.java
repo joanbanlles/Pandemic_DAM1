@@ -13,12 +13,12 @@ class PanelBotones extends JPanel {
  
 
         // Crear cuatro botones con imágenes
-        JButton boton1 = new JButton(new ImageIcon("C:\\Users\\SPK Pc Gaming\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna amarilla.png"));
-        JButton boton2 = new JButton(new ImageIcon("C:\\Users\\SPK Pc Gaming\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna roja.png"));
-        JButton boton3 = new JButton(new ImageIcon("C:\\Users\\SPK Pc Gaming\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna azul.png"));
-        JButton boton4 = new JButton(new ImageIcon("C:\\Users\\SPK Pc Gaming\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna negra.png"));
+        JButton boton1 = new JButton(new ImageIcon("C:\\Users\\miquel\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna amarilla.png"));
+        JButton boton2 = new JButton(new ImageIcon("C:\\Users\\miquel\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna roja.png"));
+        JButton boton3 = new JButton(new ImageIcon("C:\\Users\\miquel\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna azul.png"));
+        JButton boton4 = new JButton(new ImageIcon("C:\\Users\\miquel\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna negra.png"));
 
-        JButton boton5 = new JButton(new ImageIcon("C:\\Users\\SPK Pc Gaming\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\tiritacura.png"));
+        JButton boton5 = new JButton(new ImageIcon("C:\\Users\\miquel\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\tiritacura.png"));
 
         // Añadir acción a los botones (ejemplo simple)
         boton1.addActionListener(new ActionListener() {
