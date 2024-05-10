@@ -9,7 +9,7 @@ import org.w3c.dom.*;
 import org.xml.sax.SAXException;
 
 public class NewGameSubMenu extends JDialog {
-    private static final String XML_PATH = ("C:\\Users\\alumnat\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\parametros.xml"); // Actualiza esta ruta según tu archivo XML
+    private static final String XML_PATH = ("parametros.xml"); // Actualiza esta ruta según tu archivo XML
 
     public NewGameSubMenu(JFrame parent) {
         super(parent, "Selecciona nivel de dificultad", true);
@@ -17,7 +17,7 @@ public class NewGameSubMenu extends JDialog {
         // Carga la imagen de fondo
         BufferedImage backgroundImage = null;
         try {
-            backgroundImage = ImageIO.read(new File("C:\\Users\\alumnat\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\fonde del menu.jpeg"));
+            backgroundImage = ImageIO.read(new File("fonde del menu.jpeg"));
         } catch (IOException e) {
             System.err.println("Error al cargar la imagen de fondo: " + e.getMessage());
             getContentPane().setBackground(Color.GRAY);
@@ -34,7 +34,7 @@ public class NewGameSubMenu extends JDialog {
         buttonPanel.setOpaque(false);
 
         // Define botones para el submenú y añade ActionListeners
-        JButton option1 = new JButton(new ImageIcon("C:\\Users\\alumnat\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\FACIL.png"));
+        JButton option1 = new JButton(new ImageIcon("FACIL.png"));
         option1.setPreferredSize(new Dimension(450, 55));
         option1.addActionListener(e -> {
             GameParameters params = loadGameParameters("facil");
@@ -42,9 +42,13 @@ public class NewGameSubMenu extends JDialog {
                 System.out.println("Modo Fácil seleccionado");
                 System.out.println("Parámetros: " + params);
             }
+            //abrir mapa
+            Mapa mapa = new Mapa();
+            //cerrar el resto de pestañas
+            this.dispose();
         });
 
-        JButton option2 = new JButton(new ImageIcon("C:\\Users\\alumnat\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\MEDIO.png"));
+        JButton option2 = new JButton(new ImageIcon("MEDIO.png"));
         option2.setPreferredSize(new Dimension(450, 55));
         option2.addActionListener(e -> {
             GameParameters params = loadGameParameters("mitja");
@@ -52,9 +56,12 @@ public class NewGameSubMenu extends JDialog {
                 System.out.println("Modo Medio seleccionado");
                 System.out.println("Parámetros: " + params);
             }
+            Mapa mapa = new Mapa();
+            //cerrar el resto de pestañas
+            this.dispose();
         });
 
-        JButton option3 = new JButton(new ImageIcon("C:\\Users\\alumnat\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\DIFÍCIL.png"));
+        JButton option3 = new JButton(new ImageIcon("DIFÍCIL.png"));
         option3.setPreferredSize(new Dimension(450, 55));
         option3.addActionListener(e -> {
             GameParameters params = loadGameParameters("dificl");
@@ -62,6 +69,9 @@ public class NewGameSubMenu extends JDialog {
                 System.out.println("Modo Difícil seleccionado");
                 System.out.println("Parámetros: " + params);
             }
+            Mapa mapa = new Mapa();
+            //cerrar el resto de pestañas
+            this.dispose();
         });
 
         GridBagConstraints gbc = new GridBagConstraints();
@@ -89,7 +99,7 @@ public class NewGameSubMenu extends JDialog {
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
             Document doc = builder.parse(new File(XML_PATH));
-            
+
             // Busca el elemento con el id del nivel
             NodeList levels = doc.getElementsByTagName("nivel");
             for (int i = 0; i < levels.getLength(); i++) {
@@ -100,7 +110,7 @@ public class NewGameSubMenu extends JDialog {
                     int ciudadesRonda = Integer.parseInt(level.getElementsByTagName("numCuidadesInfectadasRonda").item(0).getTextContent());
                     int enfermedadesDerrota = Integer.parseInt(level.getElementsByTagName("numEnfermedadesActivasDerrota").item(0).getTextContent());
                     int brotesDerrota = Integer.parseInt(level.getElementsByTagName("numBrotesDerrota").item(0).getTextContent());
-                    
+
                     // Crea un objeto GameParameters para encapsular los valores
                     return new GameParameters(ciudadesInicio, ciudadesRonda, enfermedadesDerrota, brotesDerrota);
                 }

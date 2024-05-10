@@ -38,6 +38,7 @@ public class GameMenu extends JFrame {
         JButton newGameButton = new JButton(new ImageIcon("NUEVA PARTIDA (13).gif"));
         newGameButton.setPreferredSize(new Dimension(450, 55));
 
+
         JButton loadGameButton = new JButton(new ImageIcon("CARGAR PARTIDA.gif"));
         loadGameButton.setPreferredSize(new Dimension(450, 55));
 
@@ -51,10 +52,13 @@ public class GameMenu extends JFrame {
         exitButton.setPreferredSize(new Dimension(450, 55));
 
         // Configurar ActionListeners para cada botón
+
         newGameButton.addActionListener(e -> {
             // Ejemplo de abrir un submenú
             NewGameSubMenu subMenu = new NewGameSubMenu(this);
             subMenu.setVisible(true);
+            // Cerrar el GameMenu
+            dispose();
         });
 
         loadGameButton.addActionListener(e -> System.out.println("Cargar partida"));

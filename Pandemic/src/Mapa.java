@@ -16,9 +16,26 @@ import javax.swing.SwingUtilities;
 
 public class Mapa extends JFrame {
     public static ArrayList<JButton> botonesCiudad = new ArrayList<>();
+
     public static ArrayList <Ciudad> ciudadesarrylist = new ArrayList<>();
 
-    public Mapa() {
+    public static JButton botonselecionado;
+    // crear numCuidadesInfectadasRonda, numEnfermedadesActivasDerrota, numBrotesDerrota, incrementoporcentajevacuna, numCiudadesInfectadasInicio
+    public static int numCuidadesInfectadasRonda = 0;
+    public static int numEnfermedadesActivasDerrota = 0;
+    public static int numBrotesDerrota = 0;
+    public static int incrementoporcentajevacuna = 0;
+    public static int numCiudadesInfectadasInicio = 0;
+
+
+
+    public Mapa(int numCuidadesInfectadasRonda, int numEnfermedadesActivasDerrota, int numBrotesDerrota, int incrementoporcentajevacuna, int numCiudadesInfectadasInicio) {
+        // Asignar valores a las variables
+        this.numCuidadesInfectadasRonda = numCuidadesInfectadasRonda;
+        this.numEnfermedadesActivasDerrota = numEnfermedadesActivasDerrota;
+        this.numBrotesDerrota = numBrotesDerrota;
+        this.incrementoporcentajevacuna = incrementoporcentajevacuna;
+        this.numCiudadesInfectadasInicio = numCiudadesInfectadasInicio;
         // Configuración de la ventana principal
         setTitle("Mapa del Mundo");
         setSize(1920, 1080);
@@ -59,6 +76,70 @@ for (Ciudad ciudad : ciudadesarrylist) {
     botonesCiudad.add(botonCiudad);
     mapaLabel.add(botonCiudad);
 }
+
+
+ for (int i = 0; i < ciudadesarrylist.size(); i++) {
+    Ciudad ciudad = ciudadesarrylist.get(i);
+    JButton botonCiudad = botonesCiudad.get(i);
+
+
+
+     ImageIcon icon = null;
+
+    switch (ciudad.getEnfermedad()) {
+        case "Alfa":
+            icon = new ImageIcon("0 azul.png");
+            break;
+        case "Beta":
+            icon = new ImageIcon("0 rojo.png");
+            break;
+        case "Gama":
+            icon = new ImageIcon("0 negro.png");
+            break;
+        case "Delta":
+            icon = new ImageIcon("0 amarillo.png");
+            break;
+        default:
+            // Opcional: puedes manejar el caso en que la enfermedad no sea ninguna de las esperadas
+            break;
+    }
+
+    if (icon != null) {
+        Image image = icon.getImage();
+        Image newimg = image.getScaledInstance(botonCiudad.getWidth(), botonCiudad.getHeight(),  java.awt.Image.SCALE_SMOOTH);
+        icon = new ImageIcon(newimg);
+        botonCiudad.setIcon(icon);
+    }
+}
+        //cuando se pulsa un boton este boton se pone boton selecionado
+        for (JButton boton : botonesCiudad) {
+            boton.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    botonselecionado = boton;
+                    System.out.println("Boton seleccionado: " + botonselecionado.getText());
+                }
+            });
+        }
+
+        //hacer un for con ciudadesarraylist e infectar 8 ciudades al comienzo
+        for (int i = 0; i < numCiudadesInfectadasInicio; i++) {
+            Ciudad ciudad = ciudadesarrylist.get(i);
+            JButton botonCiudad = botonesCiudad.get(i);
+            ImageIcon icon = null;
+
+            switch (ciudad.getEnfermedad()) {
+                case "Alfa":
+                    icon = new ImageIcon("100 azul.png");
+                    break;
+                case "Beta":
+                    icon = new ImageIcon("100 rojo.png");
+                    break;
+                case "Gama":
+                    icon = new ImageIcon
+
+
+
 
 
         // Crear paneles

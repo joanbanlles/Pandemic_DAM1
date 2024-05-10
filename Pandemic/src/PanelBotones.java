@@ -20,18 +20,18 @@ class PanelBotones extends JPanel {
 
         // Crear botones y etiquetas
         // Crear botones y etiquetas
-        JButton boton1 = new JButton(new ImageIcon("C:\\Users\\SPK Pc Gaming\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna amarilla.png"));
+        JButton boton1 = new JButton(new ImageIcon("vacuna amarilla.png"));
         JLabel porcentaje1 = new JLabel();
         porcentaje1.setText(porcentajeActual1 + "%");
 
-        JButton boton2 = new JButton(new ImageIcon("C:\\Users\\SPK Pc Gaming\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna roja.png"));
+        JButton boton2 = new JButton(new ImageIcon("vacuna roja.png"));
         JLabel porcentaje2 = new JLabel(String.format("%.2f%%", porcentajeActual2));
 
-        JButton boton3 = new JButton(new ImageIcon("C:\\Users\\SPK Pc Gaming\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna azul.png"));
+        JButton boton3 = new JButton(new ImageIcon("vacuna azul.png"));
         JLabel porcentaje3 = new JLabel();
         porcentaje1.setText(porcentajeActual3 + "%");
 
-        JButton boton4 = new JButton(new ImageIcon("C:\\Users\\SPK Pc Gaming\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna negra.png"));
+        JButton boton4 = new JButton(new ImageIcon("vacuna negra.png"));
         JLabel porcentaje4 = new JLabel();
         porcentaje1.setText(porcentajeActual4 + "%");
 
@@ -54,7 +54,7 @@ class PanelBotones extends JPanel {
         add(panelBoton4);
 
         // Crear el botón curar ciudad
-        JButton curarButton1 = new JButton(new ImageIcon("C:\\Users\\SPK Pc Gaming\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\tiritacura.png"));
+        JButton curarButton1 = new JButton(new ImageIcon("tiritacura.png"));
 
         // Configura la acción del botón curar ciudad
         curarButton1.addActionListener(e -> {
