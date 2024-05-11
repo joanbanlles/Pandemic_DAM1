@@ -6,5 +6,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/Nitropc/OneDrive/Documentos/GitHub/Pandemic_DAM1/Pandemic/ojdbc8.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -1,28 +1,30 @@
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.SwingUtilities;
+import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class resultados extends JFrame {
+    private static final String USER = "DAM1_2324_PAR_ALEJANDRO";
+    private static final String PWD = "alejandro";
+    private static final String URL = "jdbc:oracle:thin:@oracle.ilerna.com:1521:xe";
 
-    public resultados() {
+    public resultados() throws SQLException {
         // Configura el título y el tamaño de la ventana
         setTitle("Resultados de partida");
         setSize(1920, 1080);
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // Cambiar a DISPOSE_ON_CLOSE para evitar cerrar toda la aplicación
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
         // Crea un panel con un fondo de imagen
         JPanel panelConFondo = new PanelConFondo("fonde del menu.jpeg");
-        panelConFondo.setLayout(new BorderLayout()); // Usa BorderLayout para el panel principal
+        panelConFondo.setLayout(new BorderLayout());
 
         // Crea un panel para los botones en la parte superior
         JPanel panelBotones = new JPanel(new FlowLayout(FlowLayout.CENTER));
-        panelBotones.setOpaque(false); // Hace que el panel sea transparente para ver el fondo
+        panelBotones.setOpaque(false);
 
         // Carga las imágenes para los botones
         JButton boton1 = new JButton(new ImageIcon("PUNTUACION F.png"));
@@ -59,27 +61,64 @@ public class resultados extends JFrame {
 
         // Haz visible la ventana
         setVisible(true);
+
+        // Consulta la base de datos después de que la ventana se haya creado y hecho visible
+        consultarPorDificultad(null, "facil");
     }
 
     public static void main(String[] args) {
         // Crea una instancia de la ventana para mostrarla
-        SwingUtilities.invokeLater(resultados::new);
+        SwingUtilities.invokeLater(() -> {
+			try {
+				new resultados();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		});
     }
-}
 
-// Clase personalizada para el panel con fondo
+
+    private static Connection conectarBaseDatos() {
+    	
+        Connection con = conexion.conectarBaseDatos();
+        return con;
+        }
+
+     // Método para consultar juegos por dificultad
+        public static void consultarPorDificultad(Statement stmt, String dificultad) throws SQLException {
+            String sql = "SELECT * FROM Juego WHERE dificultad = '" + dificultad + "'";
+
+            ResultSet rs = stmt.executeQuery(sql);
+
+            while (rs.next()) {
+                // Aquí debes usar el nombre correcto de la columna y asegurarte de que estás obteniendo el tipo de dato correcto
+                String nombre = rs.getString("nombre"); // Ejemplo: Si "nombre" es una cadena en la base de datos
+                String dific = rs.getString("dificultad"); // Obtener la dificultad como cadena
+                int rondas = rs.getInt("rondas"); // Obtener el número de rondas como entero
+
+                // Luego, puedes imprimir o hacer lo que necesites con estos valores
+                System.out.println("nombre: " + nombre +
+                        ", dificultad: " + dific +
+                        ", rondas: " + rondas);
+            }
+            rs.close();
+        }
+
+
+
+ 
+
 class PanelConFondo extends JPanel {
     private Image fondo;
 
     public PanelConFondo(String rutaFondo) {
-        // Carga la imagen de fondo
         fondo = new ImageIcon(rutaFondo).getImage();
     }
 
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        // Dibuja la imagen de fondo escalada para llenar el panel
         g.drawImage(fondo, 0, 0, getWidth(), getHeight(), this);
     }
-}
+}}
