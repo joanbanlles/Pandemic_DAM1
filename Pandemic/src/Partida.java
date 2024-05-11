@@ -18,10 +18,7 @@ class Partida {
 
 	public Partida() {
 	    this.ciudades = new ArrayList<>();
-	    this.ciudades.add(new Ciudad());
-	    this.ciudades.add(new Ciudad());
-	    this.ciudades.add(new Ciudad());
-	    this.ciudades.add(new Ciudad());
+
 	    this.desarrolloVacuna = 0;
 	    this.rondas = 0;
 	    
@@ -187,5 +184,7 @@ class Partida {
 		rondaTextField.setText(String.valueOf(partida.getRondas()));
 		desarrolloVacunaTextField.setText(String.valueOf(partida.getDesarrolloVacuna()));
 	}
+
 }
+
 

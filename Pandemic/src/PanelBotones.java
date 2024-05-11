@@ -8,10 +8,10 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 class PanelBotones extends JPanel {
-    private int porcentajeActual1 = 0;
-    private int porcentajeActual2 = 0;
-    private int porcentajeActual3 = 0;
-    private int porcentajeActual4 = 0;
+    private double porcentajeActual1 = 0;
+    private double porcentajeActual2 = 0;
+    private double porcentajeActual3 = 0;
+    private double porcentajeActual4 = 0;
 
 
     public PanelBotones() {
@@ -19,21 +19,21 @@ class PanelBotones extends JPanel {
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
         // Crear botones y etiquetas
-// Crear botones y etiquetas
-        JButton boton1 = new JButton(new ImageIcon("C:\\Users\\W10\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna amarilla.png"));
+        // Crear botones y etiquetas
+        JButton boton1 = new JButton(new ImageIcon("C:\\Users\\SPK Pc Gaming\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna amarilla.png"));
         JLabel porcentaje1 = new JLabel();
         porcentaje1.setText(porcentajeActual1 + "%");
 
-        JButton boton2 = new JButton(new ImageIcon("C:\\Users\\W10\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna roja.png"));
-      JLabel porcentaje1 = new JLabel(String.format("%.2f%%", porcentajeActual1));
+        JButton boton2 = new JButton(new ImageIcon("C:\\Users\\SPK Pc Gaming\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna roja.png"));
+        JLabel porcentaje2 = new JLabel(String.format("%.2f%%", porcentajeActual2));
 
-        JButton boton3 = new JButton(new ImageIcon("C:\\Users\\W10\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna azul.png"));
+        JButton boton3 = new JButton(new ImageIcon("C:\\Users\\SPK Pc Gaming\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna azul.png"));
         JLabel porcentaje3 = new JLabel();
-        porcentaje1.setText(porcentajeActual1 + "%");
+        porcentaje1.setText(porcentajeActual3 + "%");
 
-        JButton boton4 = new JButton(new ImageIcon("C:\\Users\\W10\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna negra.png"));
+        JButton boton4 = new JButton(new ImageIcon("C:\\Users\\SPK Pc Gaming\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\vacuna negra.png"));
         JLabel porcentaje4 = new JLabel();
-        porcentaje1.setText(porcentajeActual1 + "%");
+        porcentaje1.setText(porcentajeActual4 + "%");
 
         // Configura los ActionListeners para incrementar los porcentajes
         boton1.addActionListener(e -> incrementarPorcentaje(porcentaje1, 1));
@@ -54,7 +54,7 @@ class PanelBotones extends JPanel {
         add(panelBoton4);
 
         // Crear el botón curar ciudad
-        JButton curarButton1 = new JButton(new ImageIcon("C:\\Users\\W10\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\tiritacura.png"));
+        JButton curarButton1 = new JButton(new ImageIcon("C:\\Users\\SPK Pc Gaming\\Documents\\GitHub\\Pandemic_DAM1\\Pandemic\\tiritacura.png"));
 
         // Configura la acción del botón curar ciudad
         curarButton1.addActionListener(e -> {
@@ -79,6 +79,24 @@ class PanelBotones extends JPanel {
     private void incrementarPorcentaje(JLabel porcentaje, int indice) {
         double incremento = 25.0;
 
-        // Incrementa el porcentaje según el índice    }
+        // Incrementa el porcentaje según el índice
+        switch (indice) {
+            case 1:
+                porcentajeActual1 = Math.min(porcentajeActual1 + incremento, 100);
+                porcentaje.setText(String.format("%.2f%%", porcentajeActual1));
+                break;
+            case 2:
+                porcentajeActual2 = Math.min(porcentajeActual2 + incremento, 100);
+                porcentaje.setText(String.format("%.2f%%", porcentajeActual2));
+                break;
+            case 3:
+                porcentajeActual3 = Math.min(porcentajeActual3 + incremento, 100);
+                porcentaje.setText(String.format("%.2f%%", porcentajeActual3));
+                break;
+            case 4:
+                porcentajeActual4 = Math.min(porcentajeActual4 + incremento, 100);
+                porcentaje.setText(String.format("%.2f%%", porcentajeActual4));
+                break;
+        }
     }
 }
