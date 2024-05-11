@@ -43,7 +43,7 @@ public class NewGameSubMenu extends JDialog {
                 System.out.println("Parámetros: " + params);
             }
             //abrir mapa
-            Mapa mapa = new Mapa();
+            Mapa mapa = new Mapa(8, 4, 5, 10, 8);
             //cerrar el resto de pestañas
             this.dispose();
         });
@@ -55,10 +55,12 @@ public class NewGameSubMenu extends JDialog {
             if (params != null) {
                 System.out.println("Modo Medio seleccionado");
                 System.out.println("Parámetros: " + params);
+                //abrir mapa
+                Mapa mapa = new Mapa(12, 6, 7, 15, 12);
+                //cerrar el resto de pestañas
+                this.dispose();
             }
-            Mapa mapa = new Mapa();
-            //cerrar el resto de pestañas
-            this.dispose();
+
         });
 
         JButton option3 = new JButton(new ImageIcon("DIFÍCIL.png"));
@@ -69,9 +71,7 @@ public class NewGameSubMenu extends JDialog {
                 System.out.println("Modo Difícil seleccionado");
                 System.out.println("Parámetros: " + params);
             }
-            Mapa mapa = new Mapa();
-            //cerrar el resto de pestañas
-            this.dispose();
+
         });
 
         GridBagConstraints gbc = new GridBagConstraints();
@@ -91,6 +91,10 @@ public class NewGameSubMenu extends JDialog {
 
         setSize(500, 400);
         setLocationRelativeTo(parent);
+    }
+
+    public NewGameSubMenu() {
+
     }
 
     private GameParameters loadGameParameters(String levelId) {
