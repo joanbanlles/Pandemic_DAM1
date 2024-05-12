@@ -3,11 +3,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
 
 public class resultados extends JFrame {
+
     private static final String USER = "DAM1_2324_PAR_ALEJANDRO";
     private static final String PWD = "alejandro";
     private static final String URL = "jdbc:oracle:thin:@oracle.ilerna.com:1521:xe";
@@ -53,6 +51,69 @@ public class resultados extends JFrame {
             }
         });
 
+        // Configurar el ActionListener para boton1 (Fácil)
+        boton1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Realiza la conexión a la base de datos y ejecuta el insert para "Fácil"
+                try (Connection con = DriverManager.getConnection(URL, USER, PWD);
+                     Statement stmt = con.createStatement()) {
+                    insertarJuego(stmt, "mamame el bicho", "Fácil", 10);
+                    System.out.println("Insert para Fácil ejecutado correctamente.");
+                    consultarPorDificultad(stmt, "Fácil");
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                }
+            }
+
+			private void insertarJuego(Statement stmt, String string, String string2, int i) {
+				// TODO Auto-generated method stub
+				
+			}
+        });
+
+        // Configurar el ActionListener para boton2 (Medio)
+        boton2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Realiza la conexión a la base de datos y ejecuta el insert para "Medio"
+                try (Connection con = DriverManager.getConnection(URL, USER, PWD);
+                     Statement stmt = con.createStatement()) {
+                    insertarJuego(stmt, "doremon", "Medio", 30);
+                    System.out.println("Insert para Medio ejecutado correctamente.");
+                    consultarPorDificultad(stmt, "Medio");
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                }
+            }
+
+			private void insertarJuego(Statement stmt, String string, String string2, int i) {
+				// TODO Auto-generated method stub
+				
+			}
+        });
+
+        // Configurar el ActionListener para boton3 (Difícil)
+        boton3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Realiza la conexión a la base de datos y ejecuta el insert para "Difícil"
+                try (Connection con = DriverManager.getConnection(URL, USER, PWD);
+                     Statement stmt = con.createStatement()) {
+                    insertarJuego(stmt, "muente puelco", "Difícil", 50);
+                    System.out.println("Insert para Difícil ejecutado correctamente.");
+                    consultarPorDificultad(stmt, "Difícil");
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                }
+            }
+
+			private void insertarJuego(Statement stmt, String string, String string2, int i) {
+				// TODO Auto-generated method stub
+				
+			}
+        });
+
         // Añade el panel de botones a la parte superior del panel con fondo
         panelConFondo.add(panelBotones, BorderLayout.NORTH);
 
@@ -61,64 +122,60 @@ public class resultados extends JFrame {
 
         // Haz visible la ventana
         setVisible(true);
-
-        // Consulta la base de datos después de que la ventana se haya creado y hecho visible
-        consultarPorDificultad(null, "facil");
     }
 
     public static void main(String[] args) {
         // Crea una instancia de la ventana para mostrarla
         SwingUtilities.invokeLater(() -> {
-			try {
-				new resultados();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		});
-    }
-
-
-    private static Connection conectarBaseDatos() {
-    	
-        Connection con = conexion.conectarBaseDatos();
-        return con;
-        }
-
-     // Método para consultar juegos por dificultad
-        public static void consultarPorDificultad(Statement stmt, String dificultad) throws SQLException {
-            String sql = "SELECT * FROM Juego WHERE dificultad = '" + dificultad + "'";
-
-            ResultSet rs = stmt.executeQuery(sql);
-
-            while (rs.next()) {
-                // Aquí debes usar el nombre correcto de la columna y asegurarte de que estás obteniendo el tipo de dato correcto
-                String nombre = rs.getString("nombre"); // Ejemplo: Si "nombre" es una cadena en la base de datos
-                String dific = rs.getString("dificultad"); // Obtener la dificultad como cadena
-                int rondas = rs.getInt("rondas"); // Obtener el número de rondas como entero
-
-                // Luego, puedes imprimir o hacer lo que necesites con estos valores
-                System.out.println("nombre: " + nombre +
-                        ", dificultad: " + dific +
-                        ", rondas: " + rondas);
+            try {
+                new resultados();
+            } catch (SQLException e) {
+                e.printStackTrace();
             }
-            rs.close();
+        });
+    }
+
+ // Método para insertar juegos en la base de datos
+    public static void insertarJuegos(Statement stmt) throws SQLException {
+        // Inserta los juegos en la tabla Juego
+        String insert1 = "INSERT INTO Juego (nombre, dificultad, rondas) VALUES ('mamame el bicho', 'Fácil', 10)";
+        String insert2 = "INSERT INTO Juego (nombre, dificultad, rondas) VALUES ('muente puelco', 'Difícil', 50)";
+        String insert3 = "INSERT INTO Juego (nombre, dificultad, rondas) VALUES ('doremon', 'Medio', 30)";
+        stmt.executeUpdate(insert1);
+        stmt.executeUpdate(insert2);
+        stmt.executeUpdate(insert3);
+    }
+
+
+    // Método para consultar juegos por dificultad
+    public static void consultarPorDificultad(Statement stmt, String dificultad) throws SQLException {
+        String sql = "SELECT * FROM Juego WHERE dificultad = '" + dificultad + "'";
+        ResultSet rs = stmt.executeQuery(sql);
+
+        // Imprimir los resultados en la consola estándar
+        while (rs.next()) {
+            // Aquí debes usar el nombre correcto de la columna y asegurarte de que estás obteniendo el tipo de dato correcto
+            String nombre = rs.getString("nombre"); // Ejemplo: Si "nombre" es una cadena en la base de datos
+            String dific = rs.getString("dificultad"); // Obtener la dificultad como cadena
+            int rondas = rs.getInt("rondas"); // Obtener el número de rondas como entero
+
+            // Imprimir los resultados en la consola estándar
+            System.out.printf("nombre: %s, dificultad: %s, rondas: %d%n", nombre, dific, rondas);
+        }
+        rs.close();
+    }
+
+    class PanelConFondo extends JPanel {
+        private Image fondo;
+
+        public PanelConFondo(String rutaFondo) {
+            fondo = new ImageIcon(rutaFondo).getImage();
         }
 
-
-
- 
-
-class PanelConFondo extends JPanel {
-    private Image fondo;
-
-    public PanelConFondo(String rutaFondo) {
-        fondo = new ImageIcon(rutaFondo).getImage();
+        @Override
+        protected void paintComponent(Graphics g) {
+            super.paintComponent(g);
+            g.drawImage(fondo, 0, 0, getWidth(), getHeight(), this);
+        }
     }
-
-    @Override
-    protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        g.drawImage(fondo, 0, 0, getWidth(), getHeight(), this);
-    }
-}}
+}
