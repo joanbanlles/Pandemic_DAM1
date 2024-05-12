@@ -43,7 +43,7 @@ public class NewGameSubMenu extends JDialog {
                 System.out.println("Parámetros: " + params);
             }
             //abrir mapa
-            Mapa mapa = new Mapa();
+            Mapa mapa = new Mapa( );
             //cerrar el resto de pestañas
             this.dispose();
         });
@@ -56,7 +56,7 @@ public class NewGameSubMenu extends JDialog {
                 System.out.println("Modo Medio seleccionado");
                 System.out.println("Parámetros: " + params);
             }
-            Mapa mapa = new Mapa();
+            //Mapa mapa = new Mapa();
             //cerrar el resto de pestañas
             this.dispose();
         });
@@ -69,7 +69,7 @@ public class NewGameSubMenu extends JDialog {
                 System.out.println("Modo Difícil seleccionado");
                 System.out.println("Parámetros: " + params);
             }
-            Mapa mapa = new Mapa();
+            //Mapa mapa = new Mapa();
             //cerrar el resto de pestañas
             this.dispose();
         });

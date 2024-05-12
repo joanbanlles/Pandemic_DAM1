@@ -5,40 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46da12bb-7338-4296-a0c8-4c3bef8eaaaa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/parametros.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Ciudad.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Ciudad.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/GameMenu$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/GameMenu$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/GameMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/GameMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/InfoButtonHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/InfoButtonHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Datos_partida.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Datos_partida.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Mapa$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Mapa$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Mapa$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Mapa$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Mapa$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Mapa$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Mapa.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Mapa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/NewGameSubMenu$GameParameters.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/NewGameSubMenu$GameParameters.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/NewGameSubMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/NewGameSubMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/PanelBotones.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/PanelBotones.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Partida$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Partida$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Partida.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Partida.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ciudades/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ciudades/1azul.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ciudades/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ciudades/2azul.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ciudades/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ciudades/3azul.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ciudades/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ciudades/4azuñ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ciudades/ciudades0.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ciudades/ciudades1.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ciudades/ciudades2.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ciudades/ciudades3.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ciudad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ciudad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InfoButtonHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InfoButtonHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Datos_partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Datos_partida.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Mapa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mapa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NewGameSubMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NewGameSubMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PanelBotones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PanelBotones.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Partida.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +52,7 @@
     "Application.Partida.executor": "Run",
     "Application.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "joan",
+    "git-widget-placeholder": "menu-mapa",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/SPK Pc Gaming/Documents/GitHub/Pandemic_DAM1/Pandemic",
     "node.js.detected.package.eslint": "true",
@@ -122,5 +99,8 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/_org_eclipse_egit_core_cmp$main.ic" NAME="main Coverage Results" MODIFIED="1715529668709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>
