@@ -34,16 +34,19 @@ public class NewGameSubMenu extends JDialog {
         buttonPanel.setOpaque(false);
 
         // Define botones para el submenú y añade ActionListeners
-JButton option1 = new JButton(new ImageIcon("FACIL.png"));
-option1.setPreferredSize(new Dimension(450, 55));
-option1.addActionListener(e -> {
-    GameParameters params = loadGameParameters("facil");
-    if (params != null) {
-        System.out.println("Modo Fácil seleccionado");
-        System.out.println("Parámetros: " + params);
-    }
-    Mapa mapa = new Mapa(6, 3, 4, 10, 6);
-    });
+        JButton option1 = new JButton(new ImageIcon("FACIL.png"));
+        option1.setPreferredSize(new Dimension(450, 55));
+        option1.addActionListener(e -> {
+            GameParameters params = loadGameParameters("facil");
+            if (params != null) {
+                System.out.println("Modo Fácil seleccionado");
+                System.out.println("Parámetros: " + params);
+            }
+            //abrir mapa
+            Mapa mapa = new Mapa(8, 4, 5, 10, 8);
+            //cerrar el resto de pestañas
+            this.dispose();
+        });
 
         JButton option2 = new JButton(new ImageIcon("MEDIO.png"));
         option2.setPreferredSize(new Dimension(450, 55));
@@ -55,7 +58,7 @@ option1.addActionListener(e -> {
                 //abrir mapa
                 Mapa mapa = new Mapa(12, 6, 7, 15, 12);
                 //cerrar el resto de pestañas
-
+                this.dispose();
             }
 
         });
