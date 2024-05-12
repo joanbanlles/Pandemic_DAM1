@@ -4,6 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="46da12bb-7338-4296-a0c8-4c3bef8eaaaa" name="Changes" comment="Desde el menu se puede acceder al mapa, iconos cambiados" />
+=======
     <list default="true" id="46da12bb-7338-4296-a0c8-4c3bef8eaaaa" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Mapa$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Mapa$1.class" afterDir="false" />
@@ -17,6 +20,7 @@
       <change beforePath="$PROJECT_DIR$/src/NewGameSubMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NewGameSubMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
     </list>
+>>>>>>> 1299e4243cba692ae53b6ded9dc25cf0e40e0cf2
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,13 +115,41 @@
       <workItem from="1715332075334" duration="149000" />
       <workItem from="1715332239860" duration="1709000" />
       <workItem from="1715344370880" duration="4990000" />
+<<<<<<< HEAD
+      <workItem from="1715352887275" duration="8044000" />
+=======
       <workItem from="1715352887275" duration="7920000" />
       <workItem from="1715433268234" duration="3017000" />
+<<<<<<< Updated upstream
+=======
+>>>>>>> 1299e4243cba692ae53b6ded9dc25cf0e40e0cf2
+>>>>>>> Stashed changes
     </task>
+    <task id="LOCAL-00001" summary="Desde el menu se puede acceder al mapa, iconos cambiados">
+      <option name="closed" value="true" />
+      <created>1715360956524</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715360956524</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Desde el menu se puede acceder al mapa, iconos cambiados">
+      <option name="closed" value="true" />
+      <created>1715361029844</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715361029844</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Desde el menu se puede acceder al mapa, iconos cambiados" />
+    <option name="LAST_COMMIT_MESSAGE" value="Desde el menu se puede acceder al mapa, iconos cambiados" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
