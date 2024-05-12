@@ -29,12 +29,13 @@ public class Mapa extends JFrame {
 
 
     public Mapa(int numCuidadesInfectadasRonda, int numEnfermedadesActivasDerrota, int numBrotesDerrota, int incrementoporcentajevacuna, int numCiudadesInfectadasInicio) {
-        // Asignar valores a las variables
-        this.numCuidadesInfectadasRonda = numCuidadesInfectadasRonda;
-        this.numEnfermedadesActivasDerrota = numEnfermedadesActivasDerrota;
-        this.numBrotesDerrota = numBrotesDerrota;
-        this.incrementoporcentajevacuna = incrementoporcentajevacuna;
-        this.numCiudadesInfectadasInicio = numCiudadesInfectadasInicio;
+    // Asignar valores a las variables
+    this.numCuidadesInfectadasRonda = numCuidadesInfectadasRonda;
+    this.numEnfermedadesActivasDerrota = numEnfermedadesActivasDerrota;
+    this.numBrotesDerrota = numBrotesDerrota;
+    this.incrementoporcentajevacuna = incrementoporcentajevacuna;
+    this.numCiudadesInfectadasInicio = numCiudadesInfectadasInicio;
+
         // Configuración de la ventana principal
         setTitle("Mapa del Mundo");
         setSize(1920, 1080);
@@ -120,7 +121,8 @@ public class Mapa extends JFrame {
         }
 
         //hacer un for con ciudadesarraylist e infectar 8 ciudades al comienzo
-        for (int i = 0; i < numCiudadesInfectadasInicio; i++) {
+        for (int i = 0; i < ciudadesarrylist.size(); i++) {
+
             Ciudad ciudad = ciudadesarrylist.get(i);
             JButton botonCiudad = botonesCiudad.get(i);
             ImageIcon icon = null;
@@ -233,9 +235,7 @@ public class Mapa extends JFrame {
             }
 
 
-    public Mapa() {
 
-    }
 }
 
 

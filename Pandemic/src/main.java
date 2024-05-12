@@ -1,10 +1,10 @@
 public class main {
     public static void main(String[] args) {
     //crear una instacncia de gamemenu
-        GameMenu gameMenu = new GameMenu();
-       NewGameSubMenu newGameSubmenu = new NewGameSubMenu();
-        //llamar a mapa
-        Mapa mapa = new Mapa();
+     GameMenu gameMenu = new GameMenu();
+        NewGameSubMenu newGameSubmenu = new NewGameSubMenu();
+
+
 
 
     }
