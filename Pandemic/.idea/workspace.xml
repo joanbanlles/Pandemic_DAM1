@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46da12bb-7338-4296-a0c8-4c3bef8eaaaa" name="Changes" comment="" />
+    <list default="true" id="46da12bb-7338-4296-a0c8-4c3bef8eaaaa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Datos_partida.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Datos_partida.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Mapa.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Mapa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Datos_partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Datos_partida.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mapa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mapa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NewGameSubMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NewGameSubMenu.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,8 +45,9 @@
     "Application.Main.executor": "Run",
     "Application.Mapa.executor": "Run",
     "Application.Partida.executor": "Run",
+    "Application.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "menu-mapa",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/SPK Pc Gaming/Documents/GitHub/Pandemic_DAM1/Pandemic",
     "node.js.detected.package.eslint": "true",
@@ -47,25 +55,10 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="hola.Main" />
-      <module name="Pandemic" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="hola.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -75,6 +68,9 @@
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\SPK Pc Gaming\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="46da12bb-7338-4296-a0c8-4c3bef8eaaaa" name="Changes" comment="" />
@@ -88,6 +84,9 @@
       <workItem from="1715332075334" duration="149000" />
       <workItem from="1715332239860" duration="1709000" />
       <workItem from="1715344370880" duration="4990000" />
+      <workItem from="1715352887275" duration="7920000" />
+      <workItem from="1715588529981" duration="3481000" />
+      <workItem from="1715602272760" duration="1352000" />
     </task>
     <servers />
   </component>
@@ -97,5 +96,8 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/_org_eclipse_egit_core_cmp$main.ic" NAME="main Coverage Results" MODIFIED="1715529668709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>

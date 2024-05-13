@@ -46,6 +46,11 @@ public class Ciudad {
 		return infeccion;
 	}
 
+	public String getEnfermedad() {
+		return enfermedad;
+
+	}
+
 	// Setters
 	public void setIdCiudad(int idCiudad) {
 		this.idCiudad = idCiudad;
@@ -59,7 +64,7 @@ public class Ciudad {
 	public void setCoords(int[] coords) {
 		this.coords = coords;
 	}
-
+ //setters
 	public void setIdColor(int idColor) {
 		this.idColor = idColor;
 	}

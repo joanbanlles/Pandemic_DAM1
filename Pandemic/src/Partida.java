@@ -22,116 +22,7 @@ class Partida {
 	    this.desarrolloVacuna = 0;
 	    this.rondas = 0;
 	    
-	    // Eliminar la línea partida = new Partida();
 
-	    frame = new JFrame("Juego");
-	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	    frame.setLayout(new BorderLayout());
-
-	    // Resto del código de la clase JuegoSwing...
-
-	    // Panel para mostrar el estado
-	    estadoTextArea = new JTextArea(10, 30);
-	    estadoTextArea.setEditable(false);
-	    JScrollPane estadoScrollPane = new JScrollPane(estadoTextArea);
-	    frame.add(estadoScrollPane, BorderLayout.CENTER);
-
-	    // Panel para la entrada y los botones
-	    JPanel panel = new JPanel();
-	    panel.setLayout(new GridLayout(2, 1));
-
-	    // Panel superior
-	    JPanel panelSuperior = new JPanel();
-	    panelSuperior.setLayout(new GridLayout(2, 2));
-
-	    JLabel rondaLabel = new JLabel("Ronda:");
-	    rondaTextField = new JTextField();
-	    rondaTextField.setEditable(false);
-	    rondaTextField.setText(String.valueOf(this.rondas));
-
-	    JLabel desarrolloVacunaLabel = new JLabel("Desarrollo de la vacuna:");
-	    desarrolloVacunaTextField = new JTextField();
-	    desarrolloVacunaTextField.setEditable(false);
-	    desarrolloVacunaTextField.setText(String.valueOf(this.desarrolloVacuna));
-
-	    panelSuperior.add(rondaLabel);
-	    panelSuperior.add(rondaTextField);
-	    panelSuperior.add(desarrolloVacunaLabel);
-	    panelSuperior.add(desarrolloVacunaTextField);
-
-	    panel.add(panelSuperior);
-
-	    // Panel inferior para los botones
-	    JPanel panelInferior = new JPanel();
-	    panelInferior.setLayout(new GridLayout(1, 5));
-
-	    JButton curarButton = new JButton("Curar ciudad");
-	    curarButton.addActionListener(new ActionListener() {
-	        @Override
-	        public void actionPerformed(ActionEvent e) {
-	            // Obtener el índice de la ciudad seleccionada.
-	            int indiceCiudad = obtenerCiudadSeleccionada();
-	            
-	            // Verificar si el índice de la ciudad seleccionada es válido.
-	            if (indiceCiudad >= 0 && indiceCiudad < ciudades.size()) {
-	                // Curar la ciudad con el índice seleccionado.
-	                curarCiudad(indiceCiudad);
-	                
-	                // Actualizar el estado después de curar la ciudad.
-	                actualizarEstado();
-	            } else {
-	                // Mostrar un mensaje de error si la ciudad seleccionada no es válida.
-	                JOptionPane.showMessageDialog(frame, "Ciudad seleccionada inválida. Por favor, seleccione una ciudad válida.");
-	            }
-	        }
-	    });
-
-
-
-
-	    JButton finalizarButton = new JButton("Finalizar turno");
-	    finalizarButton.addActionListener(new ActionListener() {
-	        @Override
-	        public void actionPerformed(ActionEvent e) {
-	            finalizarTurno();
-	            actualizarEstado();
-	        }
-	    });
-
-	    panelInferior.add(curarButton);
-
-
-
-	    panelInferior.add(finalizarButton);
-
-	    panel.add(panelInferior);
-
-	    frame.add(panel, BorderLayout.SOUTH);
-
-	    // Configurar el tamaño y visibilidad de la ventana
-	    frame.pack();
-	    frame.setVisible(true);
-
-	    if (this.partida != null) {
-	        this.partida.actualizarEstado();
-	    }
-
-
-
-
-
-		
-		panelInferior.add(finalizarButton);
-
-		panel.add(panelInferior);
-
-		frame.add(panel, BorderLayout.SOUTH);
-
-		// Configurar el tamaño y visibilidad de la ventana
-		frame.pack();
-		frame.setVisible(true);
-
-		actualizarEstado();
 	}
 
 	protected int obtenerCiudadSeleccionada() {
@@ -184,7 +75,6 @@ class Partida {
 		rondaTextField.setText(String.valueOf(partida.getRondas()));
 		desarrolloVacunaTextField.setText(String.valueOf(partida.getDesarrolloVacuna()));
 	}
-
 }
 
 
