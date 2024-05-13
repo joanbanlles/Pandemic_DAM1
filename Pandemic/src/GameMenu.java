@@ -3,6 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 public class GameMenu extends JFrame {
     public GameMenu() {
@@ -68,7 +69,12 @@ public class GameMenu extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Abrir la ventana de resultados
-                resultados resultWindow = new resultados();
+                resultados resultWindow = null;
+                try {
+                    resultWindow = new resultados();
+                } catch (SQLException ex) {
+                    throw new RuntimeException(ex);
+                }
                 resultWindow.setVisible(true);
                 // Cerrar el GameMenu
                 dispose();
