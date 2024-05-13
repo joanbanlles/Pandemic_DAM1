@@ -117,27 +117,29 @@ public class resultados extends JFrame {
         stmt.executeUpdate(insert);
     }
 
-    // Método para consultar juegos por dificultad
+ // Método para consultar juegos por dificultad y mostrar solo un resultado
     public void consultarPorDificultad(Statement stmt, String dificultad) {
-        String sql = "SELECT * FROM Juego WHERE dificultad = '" + dificultad + "'";
+        String sql = "SELECT * FROM (SELECT * FROM Juego WHERE dificultad = '" + dificultad + "') WHERE ROWNUM <= 1";
         try {
             ResultSet rs = stmt.executeQuery(sql);
             DefaultTableModel model = new DefaultTableModel();
             model.addColumn("Nombre");
             model.addColumn("Rondas");
-            while (rs.next()) {
+            if (rs.next()) {
                 String nombre = rs.getString("nombre");
                 int rondas = rs.getInt("rondas");
                 model.addRow(new Object[]{nombre, rondas});
             }
             JTable table = new JTable(model);
-            String titulo = "Resultados - " + dificultad; // Título dinámico
+            String titulo = "Resultado - " + dificultad; // Título dinámico
             JOptionPane.showMessageDialog(this, new JScrollPane(table), titulo, JOptionPane.PLAIN_MESSAGE);
             rs.close();
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
     }
+
+
 
     class PanelConFondo extends JPanel {
         private Image fondo;
