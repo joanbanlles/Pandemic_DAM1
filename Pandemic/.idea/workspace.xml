@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46da12bb-7338-4296-a0c8-4c3bef8eaaaa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/parametros.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Datos_partida.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Datos_partida.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Mapa$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Mapa$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Mapa$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Mapa$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Mapa$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Mapa$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Mapa.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Mapa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/NewGameSubMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/NewGameSubMenu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Datos_partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Datos_partida.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Mapa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mapa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NewGameSubMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NewGameSubMenu.java" afterDir="false" />
@@ -60,7 +55,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -90,6 +85,8 @@
       <workItem from="1715332239860" duration="1709000" />
       <workItem from="1715344370880" duration="4990000" />
       <workItem from="1715352887275" duration="7920000" />
+      <workItem from="1715588529981" duration="3481000" />
+      <workItem from="1715602272760" duration="1352000" />
     </task>
     <servers />
   </component>

@@ -43,8 +43,9 @@ public class NewGameSubMenu extends JDialog {
                 System.out.println("Parámetros: " + params);
             }
             //abrir mapa
-            Mapa mapa = new Mapa( );
+            Mapa mapa = new Mapa("facil" );
             //cerrar el resto de pestañas
+            this.dispose();
             this.dispose();
         });
 
@@ -93,7 +94,7 @@ public class NewGameSubMenu extends JDialog {
         setLocationRelativeTo(parent);
     }
 
-    private GameParameters loadGameParameters(String levelId) {
+    public static GameParameters loadGameParameters(String levelId) {
         try {
             // Crea un DocumentBuilder para analizar el XML
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -123,11 +124,13 @@ public class NewGameSubMenu extends JDialog {
     }
     
     // Clase para almacenar parámetros del juego
-    private static class GameParameters {
-        private final int ciudadesInicio;
-        private final int ciudadesRonda;
-        private final int enfermedadesDerrota;
-        private final int brotesDerrota;
+    public static class GameParameters {
+        private static int ciudadesInicio;
+        private static int ciudadesRonda;
+        private static int enfermedadesDerrota;
+        private static int brotesDerrota;
+
+
 
         public GameParameters(int ciudadesInicio, int ciudadesRonda, int enfermedadesDerrota, int brotesDerrota) {
             this.ciudadesInicio = ciudadesInicio;
@@ -135,6 +138,32 @@ public class NewGameSubMenu extends JDialog {
             this.enfermedadesDerrota = enfermedadesDerrota;
             this.brotesDerrota = brotesDerrota;
         }
+        //hacer getters y setters
+        public int getCiudadesInicio() {
+            return ciudadesInicio;
+        }
+        public void setCiudadesInicio(int ciudadesInicio) {
+            this.ciudadesInicio = ciudadesInicio;
+        }
+        public int getCiudadesRonda() {
+            return ciudadesRonda;
+        }
+        public void setCiudadesRonda(int ciudadesRonda) {
+            this.ciudadesRonda = ciudadesRonda;
+        }
+        public int getEnfermedadesDerrota() {
+            return enfermedadesDerrota;
+        }
+        public void setEnfermedadesDerrota(int enfermedadesDerrota) {
+            this.enfermedadesDerrota = enfermedadesDerrota;
+        }
+        public int getBrotesDerrota() {
+            return brotesDerrota;
+        }
+        public void setBrotesDerrota(int brotesDerrota) {
+            this.brotesDerrota = brotesDerrota;
+        }
+
 
         @Override
         public String toString() {

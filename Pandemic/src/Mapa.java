@@ -25,7 +25,8 @@ public class Mapa extends JFrame {
     public static JButton botonselecionado;
     // crear numCuidadesInfectadasRonda, numEnfermedadesActivasDerrota, numBrotesDerrota, incrementoporcentajevacuna, numCiudadesInfectadasInicio
 
-    public Mapa() {
+    public Mapa(String dificultad) {
+        NewGameSubMenu.GameParameters params = NewGameSubMenu.loadGameParameters(dificultad);
         // Configuración de la ventana principal
         setTitle("Mapa del Mundo");
         setSize(1920, 1080);
@@ -185,16 +186,17 @@ public class Mapa extends JFrame {
                     setVisible(true);
 
 
-        infectarCiudadesInicio();
-
+        infectarCiudadesInicio(params.getCiudadesInicio());
+        
     }
 
 
-public static void infectarCiudadesInicio(){
+public static void infectarCiudadesInicio(int numCiudadesInfectadasInicio){
+
         ArrayList<Ciudad> infectadas = new ArrayList<>();
         Random rand = new Random();
-        for (int i = 0; i < dp.numCiudadesInfectadasInicio; i++) {
-            int int_random = rand.nextInt(0, ciudadesarrylist.size() );
+        for (int i = 0; i <numCiudadesInfectadasInicio; i++) {
+            int int_random = rand.nextInt(ciudadesarrylist.size());
             ciudadesarrylist.get(int_random).setInfeccion(ciudadesarrylist.get(int_random).getInfeccion() + 1);
             infectadas.add(ciudadesarrylist.get(int_random));
         }
@@ -206,22 +208,23 @@ public static void infectarCiudadesInicio(){
 
             switch (ciudad.getEnfermedad()) {
                 case "Alfa":
-                    icon = new ImageIcon("1 azul.png");
+                    icon = new ImageIcon("1 azul.png"); // Cambiar la ruta según sea necesario
                     break;
                 case "Beta":
-                    icon = new ImageIcon("1 rojo.png");
+                    icon = new ImageIcon("1 rojo.png"); // Cambiar la ruta según sea necesario
                     break;
                 case "Gama":
-                    icon = new ImageIcon("1 negro.png");
+                    icon = new ImageIcon("1 negro.png"); // Cambiar la ruta según sea necesario
                     break;
                 case "Delta":
-                    icon = new ImageIcon("1 amarillo.png");
+                    icon = new ImageIcon("1 amarillo.png"); // Cambiar la ruta según sea necesario
                     break;
                 default:
                     // Opcional: puedes manejar el caso en que la enfermedad no sea ninguna de las esperadas
                     break;
             }
-            
+
+            botonCiudad.setIcon(icon); // Establecer el nuevo ícono para la ciudad infectada
         }
         //printear el nombre de las ciudades infectadas
     for (int i = 0; i < infectadas.size(); i++) {

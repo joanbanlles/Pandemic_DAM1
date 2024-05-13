@@ -117,6 +117,7 @@ public class Datos_partida {
     }
     public void setNumCiudadesInfectadasInicio(int numCiudadesInfectadasInicio) {
         this.numCiudadesInfectadasInicio = numCiudadesInfectadasInicio;
+
     }
     public int getNumCuidadesInfectadasRonda() {
         return numCuidadesInfectadasRonda;
