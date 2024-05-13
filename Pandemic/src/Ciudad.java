@@ -1,3 +1,5 @@
+import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Dictionary;
@@ -55,9 +57,10 @@ public class Ciudad {
 	public void setIdCiudad(int idCiudad) {
 		this.idCiudad = idCiudad;
 	}
-	public Dictionary<Object, Object> getColindantes() {
-        return null;
-    }
+	//getcolindantes que devuelva el array de colindantes
+	public ArrayList<String> getColindantes() {
+		return colindantes;
+	}
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
@@ -106,9 +109,114 @@ public class Ciudad {
 	}
 
 	public void curarciudad() {
-		// TODO Auto-generated method stub
+		if (Mapa.contadorAcciones >= 1) {
+
+			//restarle 1 a la infeccion
+			this.setInfeccion(this.getInfeccion() - 1);
+			//imprimir el nombre de la ciudad y su nivel de infeccion actual
+			System.out.println("Ciudad curada: " + this.getNombre() + " Nivel de infeccion: " + this.getInfeccion());
+			//si la infeccion es menor que 0, ponerla a 0
+			if (this.infeccion < 0) {
+				this.infeccion = 0;
+			}
+			//actualizar la imagen de la ciudad
+			ImageIcon icon = null;
 
 
+			switch (this.getEnfermedad()) {
+				case "Alfa":
+					if (PanelBotones.porcentajeActual3 == 100) {
+						this.setInfeccion(0);
+						icon = new ImageIcon("0 azul.png");
+
+					}
+					//actualizar imagen de la ciudad segun su nivel infeccion
+					if (this.getInfeccion() == 1) {
+						icon = new ImageIcon("1 azul.png");
+					} else if (this.getInfeccion() == 2) {
+						icon = new ImageIcon("2 azul.png");
+					} else if (this.getInfeccion() == 0) {
+						icon = new ImageIcon("0 azul.png");
+					}
+					break;
+				case "Beta":
+					if (PanelBotones.porcentajeActual2 == 100) {
+						this.setInfeccion(0);
+						icon = new ImageIcon("0 rojo.png");
+
+					}
+					//actualizar imagen de la ciudad segun su nivel infeccion
+					if (this.getInfeccion() == 1) {
+						icon = new ImageIcon("1 rojo.png");
+					} else if (this.getInfeccion() == 2) {
+						icon = new ImageIcon("2 rojo.png");
+					} else if (this.getInfeccion() == 0) {
+						icon = new ImageIcon("0 rojo.png");
+					}
+					break;
+				case "Gama":
+					if (PanelBotones.porcentajeActual4 == 100) {
+						this.setInfeccion(0);
+						icon = new ImageIcon("0 negro.png");
+					}
+					//actualizar imagen de la ciudad segun su nivel infeccion
+					if (this.infeccion == 1) {
+						icon = new ImageIcon("1 negro.png");
+					} else if (this.getInfeccion() == 2) {
+						icon = new ImageIcon("2 negro.png");
+					} else if (this.getInfeccion() == 0) {
+						icon = new ImageIcon("0 negro.png");
+					}
+					break;
+				case "Delta":
+					if (PanelBotones.porcentajeActual1 == 100) {
+						this.setInfeccion(0);
+						icon = new ImageIcon("0 amarillo.png");
+					}
+
+
+
+			//actualizar imagen de la ciudad segun su nivel infeccion
+			if (this.getInfeccion() == 1) {
+				icon = new ImageIcon("1 amarillo.png");
+			} else if (this.getInfeccion() == 2) {
+				icon = new ImageIcon("2 amarillo.png");
+			} else if (this.getInfeccion() == 0) {
+				icon = new ImageIcon("0 amarillo.png");
+			}
+			break;
+			default:
+				// Opcional: puedes manejar el caso en que la enfermedad no sea ninguna de las esperadas
+				break;
+		}
+
+
+			//crear jbutton llamado botonCiudad
+			JButton botonCiudad = null;
+			for (int i = 0; i < Mapa.botonesCiudad.size(); i++) {
+				//buscar el boton con el nombre de la ciudad en Mapa.botonesciudad
+				if (this.getNombre().equals(Mapa.botonesCiudad.get(i).getText())){
+					botonCiudad = Mapa.botonesCiudad.get(i);
+					break;
+				}
+			}
+
+
+
+
+			if (icon != null) {
+				Image image = icon.getImage();
+				Image newimg = image.getScaledInstance(botonCiudad.getWidth(), botonCiudad.getHeight(), java.awt.Image.SCALE_SMOOTH);
+				icon = new ImageIcon(newimg);
+				botonCiudad.setIcon(icon);
+			}
+
+		}
+		//si contador de acciones es menor que 1, imprimir que no hay acciones restantes
+		else {
+			System.out.println("No hay acciones restantes");
+		}
+		//si el porcentaje esta al nivel 100 poder curar la ciudad que esta la nivel 3
 	}
 
 }

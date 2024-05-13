@@ -9,7 +9,7 @@
     <incrementoporcentajevacuna>30</incrementoporcentajevacuna>
 </nivel>
 
-<nivel id="mitja">
+<nivel id="medio">
     <numCiudadesInfectadasInicio>8</numCiudadesInfectadasInicio>
     <numCuidadesInfectadasRonda>5</numCuidadesInfectadasRonda>
     <numEnfermedadesActivasDerrota>45</numEnfermedadesActivasDerrota>
@@ -18,7 +18,7 @@
 
 </nivel>
 
-<nivel id="dificl">
+<nivel id="dificil">
     <numCiudadesInfectadasInicio>11</numCiudadesInfectadasInicio>
     <numCuidadesInfectadasRonda>7</numCuidadesInfectadasRonda>
     <numEnfermedadesActivasDerrota>45</numEnfermedadesActivasDerrota>

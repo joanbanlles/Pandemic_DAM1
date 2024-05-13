@@ -1,17 +1,15 @@
 
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-import javax.swing.BoxLayout;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+import javax.swing.*;
 
 class PanelBotones extends JPanel {
-    private double porcentajeActual1 = 0;
-    private double porcentajeActual2 = 0;
-    private double porcentajeActual3 = 0;
-    private double porcentajeActual4 = 0;
+    public static double porcentajeActual1 = 0;
+    public static double porcentajeActual2 = 0;
+    public static double porcentajeActual3 = 0;
+    public static double porcentajeActual4 = 0;
 
 
     public PanelBotones() {
@@ -23,9 +21,11 @@ class PanelBotones extends JPanel {
         JButton boton1 = new JButton(new ImageIcon("vacuna amarilla.png"));
         JLabel porcentaje1 = new JLabel();
         porcentaje1.setText(porcentajeActual1 + "%");
+        //si contador acciones es =4 se ponga contador acciones a 0
 
         JButton boton2 = new JButton(new ImageIcon("vacuna roja.png"));
-        JLabel porcentaje2 = new JLabel(String.format("%.2f%%", porcentajeActual2));
+        JLabel porcentaje2 = new JLabel();
+        porcentaje1.setText(porcentajeActual2 + "%");
 
         JButton boton3 = new JButton(new ImageIcon("vacuna azul.png"));
         JLabel porcentaje3 = new JLabel();
@@ -36,10 +36,93 @@ class PanelBotones extends JPanel {
         porcentaje1.setText(porcentajeActual4 + "%");
 
         // Configura los ActionListeners para incrementar los porcentajes
-        boton1.addActionListener(e -> incrementarPorcentaje(porcentaje1, 1));
-        boton2.addActionListener(e -> incrementarPorcentaje(porcentaje2, 2));
-        boton3.addActionListener(e -> incrementarPorcentaje(porcentaje3, 3));
-        boton4.addActionListener(e -> incrementarPorcentaje(porcentaje4, 4));
+    boton1.addActionListener(new ActionListener() {
+    @Override
+
+    public void actionPerformed(ActionEvent e) {
+        if (Mapa.contadorAcciones == 4) {
+            incrementarPorcentaje(porcentaje1, 1);
+            Mapa.contadorAcciones = 0;
+            Mapa.labelAcciones.setText("Acciones restantes: " + Mapa.contadorAcciones);
+            if (porcentajeActual1 == 100 && porcentajeActual2 == 100 && porcentajeActual3 == 100 && porcentajeActual4 == 100) {
+                System.out.println("Has ganado la partida");
+                //ventana emergente de que has ganado
+                JOptionPane.showMessageDialog(null, "Has ganado la partida ole tu ;)");
+                System.exit(0);
+
+
+            }
+        }
+    }
+});
+
+        boton2.addActionListener(new ActionListener() {
+            @Override
+
+            public void actionPerformed(ActionEvent e) {
+                if (Mapa.contadorAcciones == 4) {
+                    incrementarPorcentaje(porcentaje2, 2);
+                    Mapa.contadorAcciones = 0;
+                    Mapa.labelAcciones.setText("Acciones restantes: " + Mapa.contadorAcciones);
+                    //si las 4 estan al 100& has ganado la partida
+                    if (porcentajeActual1 == 100 && porcentajeActual2 == 100 && porcentajeActual3 == 100 && porcentajeActual4 == 100) {
+                        System.out.println("Has ganado la partida");
+                        //ventana emergente de que has ganado
+                        JOptionPane.showMessageDialog(null, "Has ganado la partida ole tu ;)");
+                            System.exit(0);
+
+
+                        }
+                }
+
+            }
+        });
+
+        boton3.addActionListener(new ActionListener() {
+            @Override
+
+            public void actionPerformed(ActionEvent e) {
+                if (Mapa.contadorAcciones == 4) {
+                    incrementarPorcentaje(porcentaje3, 3);
+                    Mapa.contadorAcciones = 0;
+                    Mapa.labelAcciones.setText("Acciones restantes: " + Mapa.contadorAcciones);
+                    if (porcentajeActual1 == 100 && porcentajeActual2 == 100 && porcentajeActual3 == 100 && porcentajeActual4 == 100) {
+                        System.out.println("Has ganado la partida");
+                        //ventana emergente de que has ganado
+                        JOptionPane.showMessageDialog(null, "Has ganado la partida ole tu ;)");
+                        System.exit(0);
+
+
+                    }
+                }
+            }
+        });
+
+        boton4.addActionListener(new ActionListener() {
+            @Override
+
+            public void actionPerformed(ActionEvent e) {
+                if (Mapa.contadorAcciones == 4) {
+                    incrementarPorcentaje(porcentaje4, 4);
+                    Mapa.contadorAcciones = 0;
+                    Mapa.labelAcciones.setText("Acciones restantes: " + Mapa.contadorAcciones);
+                    if (porcentajeActual1 == 100 && porcentajeActual2 == 100 && porcentajeActual3 == 100 && porcentajeActual4 == 100) {
+                        System.out.println("Has ganado la partida");
+                        //ventana emergente de que has ganado
+                        JOptionPane.showMessageDialog(null, "Has ganado la partida ole tu ;)");
+                        System.exit(0);
+
+
+                    }
+                }
+            }
+        });
+
+
+
+
+
+
 
         // Crear paneles para cada botón y su etiqueta de porcentaje
         JPanel panelBoton1 = crearPanelConBotonYPorcentaje(boton1, porcentaje1);
@@ -59,6 +142,22 @@ class PanelBotones extends JPanel {
         // Configura la acción del botón curar ciudad
         curarButton1.addActionListener(e -> {
             // Lógica para curar ciudad
+            String nombreciudad = Mapa.botonselecionado.getText();
+            // Busca la ciudad en la lista de ciudades
+            for (Ciudad ciudad :Mapa.ciudadesarrylist) {
+                if (ciudad.getNombre().equals(nombreciudad)) {
+                    // Curar la ciudad
+                    ciudad.curarciudad();
+                    if (Mapa.contadorAcciones >=1) {
+                        Mapa.contadorAcciones--;
+                        Mapa.labelAcciones.setText("Acciones restantes: " + Mapa.contadorAcciones);
+
+
+                    }
+                    break;
+                }
+            }
+
         });
 
         // Añade el botón curar ciudad al final del panel
