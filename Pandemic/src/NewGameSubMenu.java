@@ -61,7 +61,7 @@ public class NewGameSubMenu extends JDialog {
             this.dispose();
         });
 
-        JButton option3 = new JButton(new ImageIcon("DIFÍCIL.png"));
+        JButton option3 = new JButton(new ImageIcon("dificil.png"));
         option3.setPreferredSize(new Dimension(450, 55));
         option3.addActionListener(e -> {
             GameParameters params = loadGameParameters("dificl");
