@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46da12bb-7338-4296-a0c8-4c3bef8eaaaa" name="Changes" comment="" />
+    <list default="true" id="46da12bb-7338-4296-a0c8-4c3bef8eaaaa" name="Changes" comment="intentar arreglar errors pero no he pogut he tocat varies coses varies">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Ciudad.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Ciudad.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Datos_partida.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Datos_partida.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Mapa$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Mapa$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Mapa$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Mapa$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Mapa$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Mapa$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Mapa$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Mapa$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Mapa.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Mapa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/NewGameSubMenu$GameParameters.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/NewGameSubMenu$GameParameters.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/NewGameSubMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/NewGameSubMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/PanelBotones$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/PanelBotones$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/PanelBotones$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/PanelBotones$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/PanelBotones$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/PanelBotones$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/PanelBotones$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/PanelBotones$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/PanelBotones.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/PanelBotones.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/parametros.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/parametros.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,27 +49,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Clases.executor": "Run",
-    "Application.GameMenu.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.Mapa.executor": "Run",
-    "Application.Partida.executor": "Run",
-    "Application.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/SPK Pc Gaming/Documents/GitHub/Pandemic_DAM1/Pandemic",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Clases.executor&quot;: &quot;Run&quot;,
+    &quot;Application.GameMenu.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Mapa.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Partida.executor&quot;: &quot;Run&quot;,
+    &quot;Application.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/SPK Pc Gaming/Documents/GitHub/Pandemic_DAM1/Pandemic&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Color Scheme Font&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -80,6 +98,9 @@
       <workItem from="1715352887275" duration="7920000" />
       <workItem from="1715588529981" duration="3481000" />
       <workItem from="1715602272760" duration="1352000" />
+      <workItem from="1715697529875" duration="369000" />
+      <workItem from="1715705130514" duration="720000" />
+      <workItem from="1715783430739" duration="429000" />
     </task>
     <servers />
   </component>
