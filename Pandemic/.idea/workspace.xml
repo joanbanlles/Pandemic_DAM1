@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="46da12bb-7338-4296-a0c8-4c3bef8eaaaa" name="Changes" comment="intentar arreglar errors pero no he pogut he tocat varies coses varies">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Ciudad.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Ciudad.class" afterDir="false" />
@@ -22,6 +23,10 @@
       <change beforePath="$PROJECT_DIR$/bin/PanelBotones.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/PanelBotones.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/parametros.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/parametros.class" afterDir="false" />
+=======
+    <list default="true" id="46da12bb-7338-4296-a0c8-4c3bef8eaaaa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +54,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< Updated upstream
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.Clases.executor&quot;: &quot;Run&quot;,
@@ -68,6 +74,27 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Color Scheme Font&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Clases.executor": "Run",
+    "Application.GameMenu.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.Mapa.executor": "Run",
+    "Application.Partida.executor": "Run",
+    "Application.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/SPK Pc Gaming/Desktop/Flutter i dart",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font",
+    "vue.rearranger.settings.migration": "true"
+>>>>>>> Stashed changes
   }
 }</component>
   <component name="SharedIndexes">
@@ -98,9 +125,14 @@
       <workItem from="1715352887275" duration="7920000" />
       <workItem from="1715588529981" duration="3481000" />
       <workItem from="1715602272760" duration="1352000" />
+<<<<<<< Updated upstream
       <workItem from="1715697529875" duration="369000" />
       <workItem from="1715705130514" duration="720000" />
       <workItem from="1715783430739" duration="429000" />
+=======
+      <workItem from="1715621111788" duration="653000" />
+      <workItem from="1716295348169" duration="48000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
