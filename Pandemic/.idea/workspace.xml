@@ -4,146 +4,83 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< Updated upstream
-    <list default="true" id="46da12bb-7338-4296-a0c8-4c3bef8eaaaa" name="Changes" comment="intentar arreglar errors pero no he pogut he tocat varies coses varies">
+    <list default="true" id="9e60ee9a-acf0-443c-9283-5e1b86a6e912" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Ciudad.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Ciudad.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Datos_partida.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Datos_partida.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Mapa$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Mapa$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Mapa$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Mapa$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Mapa$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Mapa$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Mapa$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Mapa$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/bin/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Clases$1Accion.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Clases$1Accion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Clases.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Clases.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/CureListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/CureListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Mapa.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Mapa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/NewGameSubMenu$GameParameters.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/NewGameSubMenu$GameParameters.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/NewGameSubMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/NewGameSubMenu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/PanelBotones$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/PanelBotones$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/PanelBotones$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/PanelBotones$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/PanelBotones$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/PanelBotones$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/PanelBotones$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/PanelBotones$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/PanelBotones.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/PanelBotones.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/parametros.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/parametros.class" afterDir="false" />
-=======
-    <list default="true" id="46da12bb-7338-4296-a0c8-4c3bef8eaaaa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
->>>>>>> Stashed changes
+      <change beforePath="$PROJECT_DIR$/bin/Partida.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Partida.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Vacuna.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Vacuna.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Virus.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Virus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/control_datos.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/control_datos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/control_partida.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/control_partida.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pantalla_partida$PantallaPartida.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pantalla_partida$PantallaPartida.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pantalla_partida.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pantalla_partida.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mapa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mapa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PanelBotones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PanelBotones.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 0
+  &quot;associatedIndex&quot;: 8
 }</component>
-  <component name="ProjectId" id="2gEvIlEHBhEy1hjlLdfEExCcvd6" />
+  <component name="ProjectId" id="2gp6AhMknERMIu01P7JfDfUkuD3" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< Updated upstream
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Clases.executor&quot;: &quot;Run&quot;,
-    &quot;Application.GameMenu.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Mapa.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Partida.executor&quot;: &quot;Run&quot;,
-    &quot;Application.main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/SPK Pc Gaming/Documents/GitHub/Pandemic_DAM1/Pandemic&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Color Scheme Font&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-=======
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Clases.executor": "Run",
-    "Application.GameMenu.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.Mapa.executor": "Run",
-    "Application.Partida.executor": "Run",
     "Application.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/SPK Pc Gaming/Desktop/Flutter i dart",
+    "last_opened_file_path": "C:/Users/SPK Pc Gaming/Documents/GitHub/Pandemic_DAM1/Pandemic",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font",
     "vue.rearranger.settings.migration": "true"
->>>>>>> Stashed changes
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration>C:\Users\SPK Pc Gaming\AppData\Roaming\Subversion</configuration>
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="46da12bb-7338-4296-a0c8-4c3bef8eaaaa" name="Changes" comment="" />
-      <created>1715275476183</created>
+      <changelist id="9e60ee9a-acf0-443c-9283-5e1b86a6e912" name="Changes" comment="" />
+      <created>1716382031522</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1715275476183</updated>
-      <workItem from="1715275477068" duration="21000" />
-      <workItem from="1715275505895" duration="157000" />
-      <workItem from="1715275673084" duration="2642000" />
-      <workItem from="1715332075334" duration="149000" />
-      <workItem from="1715332239860" duration="1709000" />
-      <workItem from="1715344370880" duration="4990000" />
-      <workItem from="1715352887275" duration="7920000" />
-      <workItem from="1715588529981" duration="3481000" />
-      <workItem from="1715602272760" duration="1352000" />
-<<<<<<< Updated upstream
-      <workItem from="1715697529875" duration="369000" />
-      <workItem from="1715705130514" duration="720000" />
-      <workItem from="1715783430739" duration="429000" />
-=======
-      <workItem from="1715621111788" duration="653000" />
-      <workItem from="1716295348169" duration="48000" />
->>>>>>> Stashed changes
+      <updated>1716382031522</updated>
+      <workItem from="1716382032675" duration="1456000" />
+      <workItem from="1716393197237" duration="50000" />
+      <workItem from="1716840773449" duration="1526000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/_org_eclipse_egit_core_cmp$main.ic" NAME="main Coverage Results" MODIFIED="1715529668709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>

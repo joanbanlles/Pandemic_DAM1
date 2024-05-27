@@ -42,7 +42,6 @@ class PanelBotones extends JPanel {
     public void actionPerformed(ActionEvent e) {
         if (Mapa.contadorAcciones == 4) {
             incrementarPorcentaje(porcentaje1, 1);
-            Mapa.contadorAcciones = 0;
             Mapa.labelAcciones.setText("Acciones restantes: " + Mapa.contadorAcciones);
             if (porcentajeActual1 == 100 && porcentajeActual2 == 100 && porcentajeActual3 == 100 && porcentajeActual4 == 100) {
                 System.out.println("Has ganado la partida");
@@ -62,7 +61,6 @@ class PanelBotones extends JPanel {
             public void actionPerformed(ActionEvent e) {
                 if (Mapa.contadorAcciones == 4) {
                     incrementarPorcentaje(porcentaje2, 2);
-                    Mapa.contadorAcciones = 0;
                     Mapa.labelAcciones.setText("Acciones restantes: " + Mapa.contadorAcciones);
                     //si las 4 estan al 100& has ganado la partida
                     if (porcentajeActual1 == 100 && porcentajeActual2 == 100 && porcentajeActual3 == 100 && porcentajeActual4 == 100) {
@@ -84,7 +82,7 @@ class PanelBotones extends JPanel {
             public void actionPerformed(ActionEvent e) {
                 if (Mapa.contadorAcciones == 4) {
                     incrementarPorcentaje(porcentaje3, 3);
-                    Mapa.contadorAcciones = 0;
+
                     Mapa.labelAcciones.setText("Acciones restantes: " + Mapa.contadorAcciones);
                     if (porcentajeActual1 == 100 && porcentajeActual2 == 100 && porcentajeActual3 == 100 && porcentajeActual4 == 100) {
                         System.out.println("Has ganado la partida");
@@ -104,7 +102,6 @@ class PanelBotones extends JPanel {
             public void actionPerformed(ActionEvent e) {
                 if (Mapa.contadorAcciones == 4) {
                     incrementarPorcentaje(porcentaje4, 4);
-                    Mapa.contadorAcciones = 0;
                     Mapa.labelAcciones.setText("Acciones restantes: " + Mapa.contadorAcciones);
                     if (porcentajeActual1 == 100 && porcentajeActual2 == 100 && porcentajeActual3 == 100 && porcentajeActual4 == 100) {
                         System.out.println("Has ganado la partida");
@@ -146,14 +143,19 @@ class PanelBotones extends JPanel {
             // Busca la ciudad en la lista de ciudades
             for (Ciudad ciudad :Mapa.ciudadesarrylist) {
                 if (ciudad.getNombre().equals(nombreciudad)) {
-                    // Curar la ciudad
-                    ciudad.curarciudad();
-                    if (Mapa.contadorAcciones >=1) {
-                        Mapa.contadorAcciones--;
-                        Mapa.labelAcciones.setText("Acciones restantes: " + Mapa.contadorAcciones);
+                    // Curar la ciudad si la infeccion es mayor que 0
+                    if (ciudad.getInfeccion() > 0) {
+                        ciudad.curarciudad();
+                        if (Mapa.contadorAcciones >=1) {
+                            Mapa.contadorAcciones--;
+                            Mapa.labelAcciones.setText("Acciones restantes: " + Mapa.contadorAcciones);
 
 
+
+                        }
                     }
+
+
                     break;
                 }
             }
@@ -175,27 +177,30 @@ class PanelBotones extends JPanel {
     }
 
     // Método para incrementar el porcentaje de una etiqueta específica
-    private void incrementarPorcentaje(JLabel porcentaje, int indice) {
+    private void incrementarPorcentaje(JLabel porcentaje, int indice ) {
         double incremento = 25.0;
+        // si el porcentaje llega a 100 que no se gasten mas acciones
 
-        // Incrementa el porcentaje según el índice
-        switch (indice) {
-            case 1:
-                porcentajeActual1 = Math.min(porcentajeActual1 + incremento, 100);
-                porcentaje.setText(String.format("%.2f%%", porcentajeActual1));
-                break;
-            case 2:
-                porcentajeActual2 = Math.min(porcentajeActual2 + incremento, 100);
-                porcentaje.setText(String.format("%.2f%%", porcentajeActual2));
-                break;
-            case 3:
-                porcentajeActual3 = Math.min(porcentajeActual3 + incremento, 100);
-                porcentaje.setText(String.format("%.2f%%", porcentajeActual3));
-                break;
-            case 4:
-                porcentajeActual4 = Math.min(porcentajeActual4 + incremento, 100);
-                porcentaje.setText(String.format("%.2f%%", porcentajeActual4));
-                break;
+            switch (indice) {
+                case 1:
+                    porcentajeActual1 = Math.min(porcentajeActual1 + incremento, 100);
+                    porcentaje.setText(String.format("%.2f%%", porcentajeActual1));
+                    break;
+                case 2:
+                    porcentajeActual2 = Math.min(porcentajeActual2 + incremento, 100);
+                    porcentaje.setText(String.format("%.2f%%", porcentajeActual2));
+                    break;
+                case 3:
+                    porcentajeActual3 = Math.min(porcentajeActual3 + incremento, 100);
+                    porcentaje.setText(String.format("%.2f%%", porcentajeActual3));
+                    break;
+                case 4:
+                    porcentajeActual4 = Math.min(porcentajeActual4 + incremento, 100);
+                    porcentaje.setText(String.format("%.2f%%", porcentajeActual4));
+                    break;
+            }
+
         }
+        // Incrementa el porcentaje según el índice
+
     }
-}

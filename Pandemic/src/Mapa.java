@@ -218,15 +218,22 @@ public class Mapa extends JFrame {
 
 
     public static void infectarCiudadesInicio(int numCiudadesInfectadasInicio, int numBrotesMaximos) {
+
+
         //poner acciones en 4
         contadorAcciones=4;
         labelAcciones.setText("Acciones: " + contadorAcciones);
         //poner contador brotes en el valor de brotesmaximos
         contadorBrotes=numBrotesMaximos;
+
+        //necesito que cuando la ciudad este a 0 no se pueda infectar mas
+
+
         labelBrotes.setText("Brotes restantes:" + contadorBrotes);
         //poner contador rondas en 0
         contadorRondas=0;
         labelRondas.setText("Rondas: " + contadorRondas);
+
 
 
 
