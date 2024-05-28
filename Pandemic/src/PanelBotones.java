@@ -41,12 +41,12 @@ class PanelBotones extends JPanel {
 
     public void actionPerformed(ActionEvent e) {
         if (Mapa.contadorAcciones == 4) {
-            incrementarPorcentaje(porcentaje1, 1);
 
             // si el porcentaje esta a 100% que no se gasten mas acciones
             if (porcentajeActual1 != 100) {
                 Mapa.contadorAcciones=0;
             }
+            incrementarPorcentaje(porcentaje1, 1);
             Mapa.labelAcciones.setText("Acciones restantes: " + Mapa.contadorAcciones);
             if (porcentajeActual1 == 100 && porcentajeActual2 == 100 && porcentajeActual3 == 100 && porcentajeActual4 == 100) {
                 System.out.println("Has ganado la partida");
@@ -65,10 +65,11 @@ class PanelBotones extends JPanel {
 
             public void actionPerformed(ActionEvent e) {
                 if (Mapa.contadorAcciones == 4) {
-                    incrementarPorcentaje(porcentaje2, 2);
-                    if (porcentajeActual1 != 100) {
+
+                    if (porcentajeActual2 != 100) {
                         Mapa.contadorAcciones=0;
                     }
+                    incrementarPorcentaje(porcentaje2, 2);
                     Mapa.labelAcciones.setText("Acciones restantes: " + Mapa.contadorAcciones);
                     //si las 4 estan al 100& has ganado la partida
                     if (porcentajeActual1 == 100 && porcentajeActual2 == 100 && porcentajeActual3 == 100 && porcentajeActual4 == 100) {
@@ -89,12 +90,12 @@ class PanelBotones extends JPanel {
 
             public void actionPerformed(ActionEvent e) {
                 if (Mapa.contadorAcciones == 4) {
-                    incrementarPorcentaje(porcentaje3, 3);
+
                     //poner acciones a 0
-                    if (porcentajeActual1 != 100) {
+                    if (porcentajeActual3 != 100) {
                         Mapa.contadorAcciones=0;
                     }
-
+                    incrementarPorcentaje(porcentaje3, 3);
                     Mapa.labelAcciones.setText("Acciones restantes: " + Mapa.contadorAcciones);
                     if (porcentajeActual1 == 100 && porcentajeActual2 == 100 && porcentajeActual3 == 100 && porcentajeActual4 == 100) {
                         System.out.println("Has ganado la partida");
@@ -113,10 +114,11 @@ class PanelBotones extends JPanel {
 
             public void actionPerformed(ActionEvent e) {
                 if (Mapa.contadorAcciones == 4) {
-                    incrementarPorcentaje(porcentaje4, 4);
-                    if (porcentajeActual1 != 100) {
+
+                    if (porcentajeActual4 != 100) {
                         Mapa.contadorAcciones=0;
                     }
+                    incrementarPorcentaje(porcentaje4, 4);
                     Mapa.labelAcciones.setText("Acciones restantes: " + Mapa.contadorAcciones);
                     if (porcentajeActual1 == 100 && porcentajeActual2 == 100 && porcentajeActual3 == 100 && porcentajeActual4 == 100) {
                         System.out.println("Has ganado la partida");
