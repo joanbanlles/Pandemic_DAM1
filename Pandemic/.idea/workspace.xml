@@ -6,26 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="9e60ee9a-acf0-443c-9283-5e1b86a6e912" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/bin/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Clases$1Accion.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Clases$1Accion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Clases.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Clases.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/CureListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/CureListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Mapa.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Mapa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/NewGameSubMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/NewGameSubMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/PanelBotones$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/PanelBotones$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/PanelBotones$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/PanelBotones$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/PanelBotones$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/PanelBotones$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/PanelBotones$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/PanelBotones$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/PanelBotones.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/PanelBotones.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Partida.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Partida.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Vacuna.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Vacuna.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Virus.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Virus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/control_datos.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/control_datos.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/control_partida.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/control_partida.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/pantalla_partida$PantallaPartida.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pantalla_partida$PantallaPartida.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/pantalla_partida.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/pantalla_partida.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ciudad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ciudad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Datos_partida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Datos_partida.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Mapa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mapa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PanelBotones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PanelBotones.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,21 +26,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/SPK Pc Gaming/Documents/GitHub/Pandemic_DAM1/Pandemic",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/SPK Pc Gaming/Documents/GitHub/Pandemic_DAM1/Pandemic&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -76,7 +59,8 @@
       <updated>1716382031522</updated>
       <workItem from="1716382032675" duration="1456000" />
       <workItem from="1716393197237" duration="50000" />
-      <workItem from="1716840773449" duration="1526000" />
+      <workItem from="1716840773449" duration="1569000" />
+      <workItem from="1716885088895" duration="1132000" />
     </task>
     <servers />
   </component>

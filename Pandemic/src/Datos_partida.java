@@ -7,20 +7,23 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class Datos_partida {
-    private ArrayList<Ciudad> ciudades;
-    private ArrayList<Virus> virus;
-    private ArrayList<Vacuna> vacunas;
-    private int brotes;
-    private int rondas;
-    private float pDesarrollo;
-    private int acciones;
-    private int brote;
+    // Atributos de la clase
+    private ArrayList<Ciudad> ciudades;  // Lista de ciudades
+    private ArrayList<Virus> virus;  // Lista de virus
+    private ArrayList<Vacuna> vacunas;  // Lista de vacunas
+    private int brotes;  // Número de brotes
+    private int rondas;  // Número de rondas
+    private float pDesarrollo;  // Progreso de desarrollo (podría ser desarrollo de la vacuna o cura)
+    private int acciones;  // Número de acciones disponibles
+    private int brote;  // Contador de brotes
 
+    // Variables para almacenar configuraciones iniciales
     int numCiudadesInfectadasInicio;
     int numCuidadesInfectadasRonda;
     int numEnfermedadesActivasDerrota;
     int numBrotesDerrota;
 
+    // Constructor que inicializa las listas y los contadores
     public Datos_partida() {
         this.ciudades = new ArrayList<>();
         this.virus = new ArrayList<>();
@@ -31,30 +34,40 @@ public class Datos_partida {
         this.acciones = 0;
     }
 
+    // Método para cargar datos desde un archivo XML
     public void cargarDatos() {
         try {
+            // Crear una instancia de File que apunta al archivo XML
             File xmlFile = new File("parametros.xml");
+            // Crear una instancia de DocumentBuilderFactory
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+            // Crear un DocumentBuilder a partir de la fábrica
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+            // Parsear el archivo XML y obtener el documento
             Document doc = dBuilder.parse(xmlFile);
+            // Normalizar el documento XML
             doc.getDocumentElement().normalize();
 
+            // Obtener todos los elementos "nivel" del documento
             NodeList nivelNodes = doc.getElementsByTagName("nivel");
             for (int i = 0; i < nivelNodes.getLength(); i++) {
+                // Obtener el elemento actual de la lista de niveles
                 Element nivelElement = (Element) nivelNodes.item(i);
+                // Obtener los datos de configuración inicial del elemento actual
                 String id = nivelElement.getAttribute("id");
                 this.numCiudadesInfectadasInicio = Integer.parseInt(nivelElement.getElementsByTagName("numCiudadesInfectadasInicio").item(0).getTextContent());
                 this.numCuidadesInfectadasRonda = Integer.parseInt(nivelElement.getElementsByTagName("numCuidadesInfectadasRonda").item(0).getTextContent());
                 this.numEnfermedadesActivasDerrota = Integer.parseInt(nivelElement.getElementsByTagName("numEnfermedadesActivasDerrota").item(0).getTextContent());
                 this.numBrotesDerrota = Integer.parseInt(nivelElement.getElementsByTagName("numBrotesDerrota").item(0).getTextContent());
 
-                // Aquí puedes hacer lo que necesites con los datos del nivel, como almacenarlos en un ArrayList
-                // o utilizarlos de alguna otra manera.
+                // Aquí puedes manejar los datos del nivel según sea necesario, como almacenarlos en una lista o usarlos directamente
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            e.printStackTrace();  // Imprimir la traza del error si ocurre una excepción
         }
     }
+
+    // Getters y setters para acceder y modificar los atributos
 
     public ArrayList<Ciudad> getCiudades() {
         return ciudades;
@@ -115,22 +128,27 @@ public class Datos_partida {
     public int getNumCiudadesInfectadasInicio() {
         return numCiudadesInfectadasInicio;
     }
+
     public void setNumCiudadesInfectadasInicio(int numCiudadesInfectadasInicio) {
         this.numCiudadesInfectadasInicio = numCiudadesInfectadasInicio;
-
     }
+
     public int getNumCuidadesInfectadasRonda() {
         return numCuidadesInfectadasRonda;
     }
+
     public void setNumCuidadesInfectadasRonda(int numCuidadesInfectadasRonda) {
         this.numCuidadesInfectadasRonda = numCuidadesInfectadasRonda;
     }
+
     public int getNumEnfermedadesActivasDerrota() {
         return numEnfermedadesActivasDerrota;
     }
+
     public void setNumEnfermedadesActivasDerrota(int numEnfermedadesActivasDerrota) {
         this.numEnfermedadesActivasDerrota = numEnfermedadesActivasDerrota;
     }
+
     public int getNumBrotesDerrota() {
         return numBrotesDerrota;
     }
@@ -139,26 +157,27 @@ public class Datos_partida {
         this.numBrotesDerrota = numBrotesDerrota;
     }
 
-
+    // Método para modificar el nivel de infección de una ciudad específica
     public void modificarCiudad(String nCiudad, int modificacion) {
         for (Ciudad ciudad : ciudades) {
+            // Buscar la ciudad por nombre
             if (ciudad.getNombre().equals(nCiudad)) {
-               
+                // Realizar la modificación en el nivel de infección
+                ciudad.setInfeccion(ciudad.getInfeccion() + modificacion);
                 break;
             }
         }
     }
 
+    // Método para modificar la eficacia de una vacuna específica
     public void modificarVacuna(String nVacuna, float modificacion) {
         for (Vacuna vacuna : vacunas) {
+            // Buscar la vacuna por nombre
             if (vacuna.getNombre().equals(nVacuna)) {
+                // Realizar la modificación en la eficacia de la vacuna
                 vacuna.setEficacia(vacuna.getEficacia() + modificacion);
                 break;
             }
         }
     }
 }
-
-	
-
-

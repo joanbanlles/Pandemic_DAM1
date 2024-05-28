@@ -15,46 +15,47 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
+// La clase principal, que extiende JFrame para crear la ventana principal
 public class Mapa extends JFrame {
+    // Contadores estáticos para el número de acciones, brotes y rondas
     public static int contadorAcciones = 0;
     public static int contadorBrotes = 0;
     public static int contadorRondas = 0;
+    // JLabels para mostrar los contadores en la interfaz
     public static JLabel labelAcciones;
     public static JLabel labelBrotes;
     public static JLabel labelRondas;
+    // ArrayList de botones para representar cada ciudad en el mapa
     public static ArrayList<JButton> botonesCiudad = new ArrayList<>();
-
+    // ArrayList de objetos Ciudad que contiene información sobre cada ciudad
     public static ArrayList<Ciudad> ciudadesarrylist = new ArrayList<>();
-
+    // Objeto para manejar los datos de la partida
     public static Datos_partida dp = new Datos_partida();
-
+    // Botón seleccionado actualmente
     public static JButton botonselecionado;
-    // crear numCuidadesInfectadasRonda, numEnfermedadesActivasDerrota, numBrotesDerrota, incrementoporcentajevacuna, numCiudadesInfectadasInicio
 
+    // Constructor de la clase Mapa
     public Mapa(String dificultad) {
-
+        // Cargar los parámetros del juego según la dificultad
         NewGameSubMenu.GameParameters params = NewGameSubMenu.loadGameParameters(dificultad);
         // Configuración de la ventana principal
         setTitle("Mapa del Mundo");
         setSize(1920, 1080);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
         dp.cargarDatos();
 
-
-        // Configuración del BorderLayout
+        // Configuración del BorderLayout para la disposición de los elementos en la ventana
         setLayout(new BorderLayout());
 
-        // Cargar la imagen del mapa
+        // Cargar la imagen del mapa del mundo
         ImageIcon mapaImagen = new ImageIcon("mapa_mundo.png");
-
-        // Obtener dimensiones originales y escalar imagen
+        // Escalar la imagen para que se ajuste al tamaño de la ventana
+        // Esto es para que la imagen no se deforme
+        // Se calculan las dimensiones necesarias para mantener la relación de aspecto original
         int imagenAncho = mapaImagen.getIconWidth();
         int imagenAlto = mapaImagen.getIconHeight();
-
         double aspectRatio = (double) imagenAncho / imagenAlto;
         int nuevoAncho, nuevoAlto;
-
         if (getWidth() / aspectRatio < getHeight()) {
             nuevoAncho = getWidth();
             nuevoAlto = (int) (getWidth() / aspectRatio);
@@ -62,32 +63,24 @@ public class Mapa extends JFrame {
             nuevoAlto = getHeight();
             nuevoAncho = (int) (nuevoAlto * aspectRatio);
         }
-
+        // Escalar la imagen con un algoritmo suavizado
         Image imagenEscalada = mapaImagen.getImage().getScaledInstance(nuevoAncho, nuevoAlto, Image.SCALE_SMOOTH);
-
         JLabel mapaLabel = new JLabel(new ImageIcon(imagenEscalada));
         mapaLabel.setLayout(null); // Establecer layout nulo para posicionar los botones de forma específica
 
-        crearArrayCiudades(ciudadesarrylist);
-
-
-        // Crear botones para cada ciudad
+        // Crear botones para cada ciudad y añadirlos al mapaLabel
         for (Ciudad ciudad : ciudadesarrylist) {
             JButton botonCiudad = new JButton(ciudad.getNombre());
             botonCiudad.setBounds(ciudad.getCoords()[0], ciudad.getCoords()[1], 25, 25); // Tamaño del botón reducido y cuadrado
             botonesCiudad.add(botonCiudad);
             mapaLabel.add(botonCiudad);
-
         }
 
-
+        // Asignar iconos a los botones según el nivel de infección de la ciudad
         for (int i = 0; i < ciudadesarrylist.size(); i++) {
             Ciudad ciudad = ciudadesarrylist.get(i);
             JButton botonCiudad = botonesCiudad.get(i);
-
-
             ImageIcon icon = null;
-
             switch (ciudad.getEnfermedad()) {
                 case "Alfa":
                     icon = new ImageIcon("0 azul.png");
@@ -101,11 +94,7 @@ public class Mapa extends JFrame {
                 case "Delta":
                     icon = new ImageIcon("0 amarillo.png");
                     break;
-                default:
-                    // Opcional: puedes manejar el caso en que la enfermedad no sea ninguna de las esperadas
-                    break;
             }
-
             if (icon != null) {
                 Image image = icon.getImage();
                 Image newimg = image.getScaledInstance(botonCiudad.getWidth(), botonCiudad.getHeight(), java.awt.Image.SCALE_SMOOTH);
@@ -113,7 +102,8 @@ public class Mapa extends JFrame {
                 botonCiudad.setIcon(icon);
             }
         }
-        //cuando se pulsa un boton este boton se pone boton selecionado
+
+        // Asignar un ActionListener a cada botón de ciudad para gestionar la selección
         for (JButton boton : botonesCiudad) {
             boton.addActionListener(new ActionListener() {
                 @Override
@@ -124,29 +114,29 @@ public class Mapa extends JFrame {
             });
         }
 
-
-        // Crear paneles
+        // Crear paneles para diferentes secciones de la interfaz
         JPanel panelIzquierdo = new JPanel();
         panelIzquierdo.setPreferredSize(new Dimension(150, 0));
 
         JPanel panelDerecho = new PanelBotones(); // Utilizar el panel de botones personalizado
         panelDerecho.setPreferredSize(new Dimension(150, 0));
 
-        JPanel panelInferior = new JPanel(new GridBagLayout()); // Utilizar GridBagLayout
+        JPanel panelInferior = new JPanel(new GridBagLayout()); // Utilizar GridBagLayout para el panel inferior
         panelInferior.setPreferredSize(new Dimension(0, 190));
 
-        // Crear los botones "Guardar Partida" y "Pasar Turno"
+        // Crear los botones "Guardar Partida" y "Pasar Turno" con sus respectivos ActionListener
         JButton guardarPartidaButton = new JButton("Guardar Partida");
-        guardarPartidaButton.setPreferredSize(new Dimension(180, 50)); // Tamaño más grande
+        guardarPartidaButton.setPreferredSize(new Dimension(180, 50));
         JButton pasarTurnoButton = new JButton("Pasar Turno");
-        pasarTurnoButton.setPreferredSize(new Dimension(150, 140)); // Tamaño más grande
-        //action listener de pasar turno
+        pasarTurnoButton.setPreferredSize(new Dimension(150, 140));
         pasarTurnoButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 pasarTurno(params.getCiudadesRonda());
             }
         });
+
+        // Configurar el layout y añadir los componentes al panel inferior
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(10, 10, 10, 10); // Margen entre componentes
 
